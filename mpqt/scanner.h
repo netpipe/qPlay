@@ -26,6 +26,18 @@ public:
           emit fileCountChanged(fileList.count());
           emit fileAdded(iterator.fileInfo().absoluteFilePath());
       }
+      if(iterator.fileInfo().suffix().toLower() == "wav") {
+           qDebug() << "scanner" << iterator.fileInfo().absoluteFilePath();
+          fileList << entry;
+          emit fileCountChanged(fileList.count());
+          emit fileAdded(iterator.fileInfo().absoluteFilePath());
+      }
+      if(iterator.fileInfo().suffix().toLower() == "ogg") {
+           qDebug() << "scanner" << iterator.fileInfo().absoluteFilePath();
+          fileList << entry;
+          emit fileCountChanged(fileList.count());
+          emit fileAdded(iterator.fileInfo().absoluteFilePath());
+      }
       else {
           //qDebug() << QFileInfo(entry).fileName();
       }

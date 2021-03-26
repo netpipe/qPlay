@@ -1,4 +1,4 @@
-#include <mainwindow.h>
+/*#include <mainwindow.h>
 #include "ui_mainwindow.h"
 
 void MainWindow::showContextMenuForWidget(const QPoint &pos)
@@ -225,4 +225,4 @@ void MainWindow::on_listView_clicked(const QModelIndex &index)
     if (hasNextTrack()) {
   //      audio->play(tracklist.at(position)->path);
     }
-}
+}*/

@@ -31,7 +31,8 @@ HEADERS += \
     mpqt/track.h \
     mpqt/trackdelegate.h \
     mpqt/trackmodel.h \
-    mpqt/trackwidget.h
+    mpqt/trackwidget.h \
+    player.h
 
 FORMS += \
     mainwindow.ui
