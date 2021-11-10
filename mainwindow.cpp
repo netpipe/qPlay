@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->pushButton_play->setIcon(QIcon("./Resource/img/btn_play.png"));
+  //  ui->pushButton_play->setIcon(QIcon("./Resource/img/btn_play.png"));
  //   ui->pushButton_play->setIcon(QIcon(":/Resource/img/btn_play.png"));
  //   ui->label_3->setPixmap(QPixmap(":/Resource/img/freemp.png"));
  //   ui->pushButton_shuffle->setIcon(QIcon(":/Resource/img/btn_shuffle_off.png"));
@@ -87,7 +87,7 @@ void MainWindow::dropEvent(QDropEvent *ev)
        qDebug()<<"path:"<< url.path();
        QFileInfo fi(url.path());
        if (fi.isDir()) {
-           scanner = new Scanner(fi.dir(),this);
+           scanner = new Scanner(fi.dir(),this); // go inside the directory if it is one.
            connect(scanner,SIGNAL(fileAdded(QString)),this,SLOT(onFileAdded(QString)));
            scanner->start();
        }
@@ -124,7 +124,8 @@ void MainWindow::stopScanner() {
 
 void MainWindow::onFindMusic() {
     stopScanner();
-    QDir dir =QDir::home();
+    QString dir2 = QDir::homePath()+"/music/" ;
+     QDir dir = dir2;
     scanner = new Scanner(dir,this);
     connect(scanner,SIGNAL(fileAdded(QString)),this,SLOT(onFileAdded(QString)));
     scanner->start();
@@ -152,7 +153,7 @@ void MainWindow::on_closeButton_clicked()
 void MainWindow::onStartOfPlayback()
 {
    // ui->horizontalSlider_2->setMaximum(total);
-    ui->pushButton_play->setIcon(QIcon(":/Resource/img/btn_pause.png"));
+    ui->pushButton_play->setIcon(QIcon("./Resource/img/btn_pause.png"));
     QModelIndex index = trackModel->index(position, 0);
 
     if ( index.isValid() ) {
@@ -165,9 +166,10 @@ void MainWindow::onStartOfPlayback()
 }
 
 void MainWindow::onEndOfPlayback() {
-    ui->pushButton_play->setIcon(QIcon(":/Resource/img/btn_play.png"));
+  //  ui->pushButton_play->setIcon(QIcon(":/Resource/img/btn_play.png"));
     nextTrack(true);
 }
+
 void MainWindow::seek(int seconds)
 {
      //m_player->setPosition(seconds * 1000);
@@ -204,7 +206,10 @@ void MainWindow::nextTrack(bool next) {
 }
 
 void MainWindow::onPauseOfPlayback() {
-    ui->pushButton_play->setIcon(QIcon(":/Resource/img/btn_play.png"));
+ //   ui->pushButton_play->setIcon(QIcon(":/Resource/img/btn_play.png"));
+ //   ui->pushButton_play->setIcon(QIcon("./Resource/img/btn_play.png"));
+
+
 }
 
 void MainWindow::onCurPos(double position, double total) {
@@ -249,7 +254,12 @@ void MainWindow::on_pushButton_play_clicked()
 {
     if (hasNextTrack()) {
         audio->playOrPause(tracklist.at(position)->path);
+    //    audio->playOrPause(tracklist.at(20.0f)->path);
+
     }
+
+
+    // audio->changePosition(ui->horizontalSlider_2->value();
 }
 
 bool MainWindow::hasNextTrack() {
@@ -265,13 +275,13 @@ void MainWindow::setRepeatModeIcon() {
     }
     switch (repeatMode) {
     case 1:
-        ui->pushButton_repeat->setIcon(QIcon(":/Resource/img/btn_repeat_one.png"));
+        ui->pushButton_repeat->setIcon(QIcon("./Resource/img/btn_repeat_one.png"));
         break;
     case 2:
-        ui->pushButton_repeat->setIcon(QIcon(":/Resource/img/btn_repeat_all_highlighted.png"));
+        ui->pushButton_repeat->setIcon(QIcon("./Resource/img/btn_repeat_all_highlighted.png"));
         break;
     default:
-        ui->pushButton_repeat->setIcon(QIcon(":/Resource/img/btn_repeat_off.png"));
+        ui->pushButton_repeat->setIcon(QIcon("./Resource/img/btn_repeat_off.png"));
         break;
     }
 }
@@ -286,10 +296,10 @@ void MainWindow::on_pushButton_shuffle_clicked()
 {
     shuffle = !shuffle;
     if (shuffle) {
-        ui->pushButton_shuffle->setIcon(QIcon(":/Resource/img/btn_shuffle_highlighted.png"));
+        ui->pushButton_shuffle->setIcon(QIcon("./Resource/img/btn_shuffle_highlighted.png"));
     }
     else {
-        ui->pushButton_shuffle->setIcon(QIcon(":/Resource/img/btn_shuffle_off.png"));
+        ui->pushButton_shuffle->setIcon(QIcon("./Resource/img/btn_shuffle_off.png"));
     }
 }
 
@@ -315,3 +325,45 @@ void MainWindow::on_listView_clicked(const QModelIndex &index)
     }
 }
 
+
+void MainWindow::on_SavePlaylist_clicked()
+{
+
+//    QFile file2("./presets/"+ ui->savePreset->text().toLatin1() + ".preset");
+//        if(file2.open(QIODevice::ReadWrite | QIODevice::Text))// QIODevice::Append |
+//        {
+//                QTextStream stream(&file2);
+//           //     file2.seek(0);
+
+//                   stream << "CompAttLE:" << ui->CompAttLE->text().toLatin1()<< endl;
+
+//                   file2.close();
+//            }
+}
+
+void MainWindow::on_LoadPlaylist_clicked()
+{
+//    //https://stackoverflow.com/questions/31384273/how-to-search-for-a-string-in-a-text-file-using-qt
+//        QString searchString(":");
+//        QFile MyFile(ui->SelectPresetCMB->currentText());
+//        MyFile.open(QIODevice::ReadWrite);
+//        QTextStream in (&MyFile);
+//        QString line;
+//      //  int ii=0;
+//        QStringList list;
+//         //   QList<QString> nums;
+//        QStringList nums;
+
+
+//        do {
+//            line = in.readLine();
+//            searchString=":";
+//            if (line.contains(searchString)) { //, Qt::CaseSensitive
+//                // do something
+//                QRegExp rx("[:]");// match a comma or a space
+//                list = line.split(rx);
+//                nums.append(list.at(1).toLatin1());
+//            }
+//        } while (!line.isNull());
+      //ui->CompAttLE->setText(nums.at(0));
+}

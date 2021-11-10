@@ -455,13 +455,13 @@ QScrollBar::handle {
          <rect>
           <x>0</x>
           <y>190</y>
-          <width>466</width>
+          <width>478</width>
           <height>134</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_4">
          <item>
-          <widget class="QListWidget" name="listWidget"/>
+          <widget class="QListWidget" name="playlists"/>
          </item>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -521,7 +521,7 @@ QScrollBar::handle {
      <x>0</x>
      <y>0</y>
      <width>1105</width>
-     <height>23</height>
+     <height>24</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuMain">

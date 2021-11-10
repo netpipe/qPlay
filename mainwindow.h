@@ -75,6 +75,10 @@ private slots:
     void stopScanner();
 
 
+    void on_SavePlaylist_clicked();
+
+    void on_LoadPlaylist_clicked();
+
 private:
     Ui::MainWindow *ui;
 

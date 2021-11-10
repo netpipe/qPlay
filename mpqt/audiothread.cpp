@@ -37,10 +37,12 @@ AudioThread::AudioThread(QObject *parent) :
     //connect(m_player, &QMediaPlayer::positionChanged, this, &AudioThread::seek);
     endOfMusic = true;
 }
+
 void AudioThread::durationChanged(qint64 duration)
 {
     m_duration = duration / 1000;   
 }
+
 void AudioThread::positionChanged(qint64 progress)
 {
     m_progress = progress/1000;
@@ -69,6 +71,7 @@ void AudioThread::updateDurationInfo(qint64 currentInfo)
 {
     m_player->setPosition(seconds * 1000);
 }*/
+
 bool AudioThread::isPlayerAvailable() const
 {
     return m_player->isAvailable();
@@ -119,6 +122,7 @@ void AudioThread::play(QString filename)
     playing = true;
     t->start(100);
   }
+
 static bool isPlaylist(const QUrl &url) // Check for ".m3u" playlists.
 {
     if (!url.isLocalFile())
@@ -227,6 +231,7 @@ void AudioThread::changePosition(qint64 position)
 {
    // BASS_ChannelSetPosition(chan, BASS_ChannelSeconds2Bytes(chan, position), BASS_POS_BYTE);
 }
+
 QString AudioThread::getDuration(QString path) {
     //BASS_StreamFree(chan);
     //chan = BASS_StreamCreateFile(false,path.toLocal8Bit(), 0, 0, 0);
@@ -243,6 +248,7 @@ QString AudioThread::getDuration(QString path) {
    // return formattedTime(m_labelmediaduration);     
 
 }
+
 //QString AudioThread::formattedTime(double t1)
 QString AudioThread::formattedTime(QString t1)
 {
