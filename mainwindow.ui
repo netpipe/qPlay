@@ -405,8 +405,8 @@ border-radius: 4px;
        <widget class="QListView" name="listView">
         <property name="geometry">
          <rect>
-          <x>500</x>
-          <y>30</y>
+          <x>630</x>
+          <y>20</y>
           <width>401</width>
           <height>451</height>
          </rect>
@@ -455,7 +455,7 @@ QScrollBar::handle {
          <rect>
           <x>0</x>
           <y>190</y>
-          <width>478</width>
+          <width>546</width>
           <height>134</height>
          </rect>
         </property>
@@ -504,12 +504,26 @@ QScrollBar::handle {
          </item>
         </layout>
        </widget>
+       <widget class="QSlider" name="horizontalSlider">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>10</y>
+          <width>160</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
        <zorder>label_bgr</zorder>
        <zorder>verticalLayoutWidget</zorder>
        <zorder>label_3</zorder>
        <zorder>horizontalLayoutWidget_2</zorder>
        <zorder>listView</zorder>
        <zorder>verticalLayoutWidget_2</zorder>
+       <zorder>horizontalSlider</zorder>
       </widget>
      </widget>
     </item>
@@ -540,8 +554,16 @@ QScrollBar::handle {
      <string>Abo&amp;ut</string>
     </property>
    </widget>
+   <widget class="QMenu" name="menuPlaylist">
+    <property name="title">
+     <string>Playlist</string>
+    </property>
+    <addaction name="actionScan"/>
+    <addaction name="actionClear"/>
+   </widget>
    <addaction name="menuMain"/>
    <addaction name="menuAbout"/>
+   <addaction name="menuPlaylist"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionExit">
@@ -567,6 +589,16 @@ QScrollBar::handle {
   <action name="actionSave">
    <property name="text">
     <string>Save</string>
+   </property>
+  </action>
+  <action name="actionScan">
+   <property name="text">
+    <string>&amp;Scan</string>
+   </property>
+  </action>
+  <action name="actionClear">
+   <property name="text">
+    <string>&amp;Clear</string>
    </property>
   </action>
  </widget>

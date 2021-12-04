@@ -1,4 +1,4 @@
-QT       += core gui multimedia
+QT       += core gui multimedia sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -19,6 +19,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     mpqt/audiothread.cpp \
+    mpqt/playlistManager.cpp \
     mpqt/track.cpp \
     mpqt/trackdelegate.cpp \
     mpqt/trackmodel.cpp \
@@ -27,6 +28,7 @@ SOURCES += \
 HEADERS += \
     mainwindow.h \
     mpqt/audiothread.h \
+    mpqt/playlistManager.h \
     mpqt/scanner.h \
     mpqt/track.h \
     mpqt/trackdelegate.h \

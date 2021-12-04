@@ -1,5 +1,15 @@
-/*#include <mainwindow.h>
 #include "ui_mainwindow.h"
+#include <mainwindow.h>
+
+/*
+
+
+void MainWindow::on_pushButton_play_clicked() {
+  if (hasNextTrack()) {
+    player->play();
+    audio->playOrPause(tracklist.at(position)->path);
+  }
+}
 
 void MainWindow::showContextMenuForWidget(const QPoint &pos)
 {
@@ -11,22 +21,22 @@ void MainWindow::showContextMenuForWidget(const QPoint &pos)
 
 void MainWindow::dropEvent(QDropEvent *ev)
 {
-   QList<QUrl> urls = ev->mimeData()->urls();
-   stopScanner();
+    QList<QUrl> urls = ev->mimeData()->urls();
+    stopScanner();
 
-   foreach(QUrl url, urls)
-   {
-       qDebug()<<"path:"<< url.path();
-       QFileInfo fi(url.path());
-       if (fi.isDir()) {
-           scanner = new Scanner(fi.dir(),this);
-           connect(scanner,SIGNAL(fileAdded(QString)),this,SLOT(onFileAdded(QString)));
-           scanner->start();
-       }
-       if (fi.isFile()) {
-           addItem(url.path());
-       }
-   }
+    foreach(QUrl url, urls)
+    {
+        qDebug()<<"path:"<< url.path();
+        QFileInfo fi(url.path());
+        if (fi.isDir()) {
+            scanner = new Scanner(fi.dir(),this);
+            connect(scanner,SIGNAL(fileAdded(QString)),this,SLOT(onFileAdded(QString)));
+            scanner->start();
+        }
+        if (fi.isFile()) {
+            addItem(url.path());
+        }
+    }
 }
 
 void MainWindow::dragEnterEvent(QDragEnterEvent *ev)
@@ -89,8 +99,8 @@ void MainWindow::onStartOfPlayback(double total) {
 
     if ( index.isValid() ) {
         ui->listView->selectionModel()->clear();
-        ui->listView->selectionModel()->select( index, QItemSelectionModel::Select );
-        ui->listView->scrollTo(index);
+        ui->listView->selectionModel()->select( index,
+QItemSelectionModel::Select ); ui->listView->scrollTo(index);
         ui->label_artist->setText(tracklist.at(position)->artist);
         ui->label_title->setText(tracklist.at(position)->title);
     }
@@ -127,7 +137,7 @@ void MainWindow::nextTrack(bool next) {
         //audio->play(tracklist.at(position)->path);
     }
     else {
-      //  audio->stop();
+        //  audio->stop();
         player->stop();
     }
 }
@@ -140,7 +150,7 @@ void MainWindow::onCurPos(double position, double total) {
     //qDebug() << "Position" << position << "Total" << total;
     if (!moving) {
         ui->horizontalSlider_2->setValue(position);
-//        ui->label_duration->setText(audio->formattedTime(position));
+        //        ui->label_duration->setText(audio->formattedTime(position));
     }
 }
 
@@ -156,13 +166,6 @@ void MainWindow::on_horizontalSlider_sliderReleased()
     player->setPosition(ui->horizontalSlider_2->value());
 }
 
-void MainWindow::on_pushButton_play_clicked()
-{
-    if (hasNextTrack()) {
-        player->play();
- //       audio->playOrPause(tracklist.at(position)->path);
-    }
-}
 
 bool MainWindow::hasNextTrack() {
     if (tracklist.size()<=0) return false;
@@ -223,6 +226,6 @@ void MainWindow::on_listView_clicked(const QModelIndex &index)
 {
     position = index.row();
     if (hasNextTrack()) {
-  //      audio->play(tracklist.at(position)->path);
+        //      audio->play(tracklist.at(position)->path);
     }
 }*/
