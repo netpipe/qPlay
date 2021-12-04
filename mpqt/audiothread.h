@@ -28,7 +28,7 @@ public:
     void setCustomAudioRole(const QString &role);
     void addToPlaylist(const QList<QUrl> &urls);
 
-
+void setvolume(int test);
 private:
     unsigned long chan;
     QTimer *t;
