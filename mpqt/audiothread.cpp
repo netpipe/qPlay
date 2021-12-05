@@ -76,7 +76,7 @@ void AudioThread::updateDurationInfo(qint64 currentInfo) {
 
 bool AudioThread::isPlayerAvailable() const { return m_player->isAvailable(); }
 
-void AudioThread::play(QString filename) {
+void AudioThread::play(QString filename,bool online) {
   /*BASS_ChannelStop(chan);
   if (!(chan = BASS_StreamCreateFile(false, (filename.toLocal8Bit()).data(), 0,
   0, 0))) qDebug() << "Can't play file:"+filename; else
@@ -112,8 +112,11 @@ void AudioThread::play(QString filename) {
   addToPlaylist(urls);
   m_playlist->setCurrentIndex(0);
   m_player->setPosition(0);
- // m_player->setMedia(QUrl::fromLocalFile(filename));
-   m_player->setMedia(url);
+if (online){
+       m_player->setMedia(url);
+}else{
+  m_player->setMedia(QUrl::fromLocalFile(filename));
+}
   qDebug() << "Play file:" + filename;
   endOfMusic = false;
   m_player->play();

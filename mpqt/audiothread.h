@@ -49,7 +49,7 @@ signals:
     void curPos(double position, double total);   
     void sliderTime(QString sliderduration, qint64 duration,qint64 progress);
 public slots:
-    void play(QString filepath);
+    void play(QString filepath,bool online);
     void playOrPause(QString filepath);
     void pause();
     void resume();
