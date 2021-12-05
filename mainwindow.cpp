@@ -390,8 +390,8 @@ audio->play("http://185.33.21.112:80/rockclassics_64",1);
 
 void MainWindow::on_pushButton_play_clicked()
 {
-//    if (hasNextTrack()) {
-//      player->play();
-//      audio->playOrPause(tracklist.at(position)->path);
-//    }
+    if (hasNextTrack()) {
+      audio->playOrPause(tracklist.at(position)->path);
+      // audio->playOrPause(tracklist.at(20.0f)->path);
+    }
 }
