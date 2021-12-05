@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>581</width>
+    <height>369</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>581</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="screenlayout">
+     <property name="spacing">
+      <number>1</number>
+     </property>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>581</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen_2"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Options</string>
+    </property>
+    <widget class="QMenu" name="menuWindow_Opacity">
+     <property name="title">
+      <string>Window Opacity</string>
+     </property>
+     <addaction name="action10"/>
+     <addaction name="action20"/>
+     <addaction name="action30"/>
+     <addaction name="action40"/>
+     <addaction name="action50"/>
+     <addaction name="action60"/>
+     <addaction name="action70"/>
+     <addaction name="action80"/>
+     <addaction name="action90"/>
+     <addaction name="action100"/>
+    </widget>
+    <addaction name="actionColor_Options"/>
+    <addaction name="separator"/>
+    <addaction name="menuWindow_Opacity"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionShortcut_Preview"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuSettings"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="separator"/>
+   <addaction name="actionPrevious"/>
+   <addaction name="actionPlay"/>
+   <addaction name="actionPause"/>
+   <addaction name="actionNext"/>
+   <addaction name="actionStop"/>
+   <addaction name="actionPlaylists"/>
+   <addaction name="separator"/>
+   <addaction name="actionMute"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>true</bool>
+   </attribute>
+  </widget>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="newicon.qrc">
+     <normaloff>:/Images/icons/folder_page_white.png</normaloff>:/Images/icons/folder_page_white.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Browse files (Ctrl+O)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionPlay">
+   <property name="icon">
+    <iconset resource="newicon.qrc">
+     <normaloff>:/Images/icons/control_play.png</normaloff>:/Images/icons/control_play.png</iconset>
+   </property>
+   <property name="text">
+    <string>Play</string>
+   </property>
+   <property name="toolTip">
+    <string>Play (Space)</string>
+   </property>
+   <property name="shortcut">
+    <string>P</string>
+   </property>
+  </action>
+  <action name="actionPause">
+   <property name="icon">
+    <iconset resource="newicon.qrc">
+     <normaloff>:/Images/icons/control_pause.png</normaloff>:/Images/icons/control_pause.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pause</string>
+   </property>
+   <property name="toolTip">
+    <string>Pause (Space)</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="icon">
+    <iconset resource="newicon.qrc">
+     <normaloff>:/Images/icons/control_stop.png</normaloff>:/Images/icons/control_stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>Stop</string>
+   </property>
+   <property name="toolTip">
+    <string>Stop (S)</string>
+   </property>
+   <property name="shortcut">
+    <string>S</string>
+   </property>
+  </action>
+  <action name="actionNext">
+   <property name="icon">
+    <iconset resource="newicon.qrc">
+     <normaloff>:/Images/icons/skip_forward.png</normaloff>:/Images/icons/skip_forward.png</iconset>
+   </property>
+   <property name="text">
+    <string>Next</string>
+   </property>
+   <property name="toolTip">
+    <string>Play next (Alt+Right)</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Right</string>
+   </property>
+  </action>
+  <action name="actionPrevious">
+   <property name="icon">
+    <iconset resource="newicon.qrc">
+     <normaloff>:/Images/icons/skip_backward.png</normaloff>:/Images/icons/skip_backward.png</iconset>
+   </property>
+   <property name="text">
+    <string>Previous</string>
+   </property>
+   <property name="toolTip">
+    <string>Play previous (Alt+Left)</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Left</string>
+   </property>
+  </action>
+  <action name="actionMute">
+   <property name="icon">
+    <iconset resource="newicon.qrc">
+     <normaloff>:/Images/icons/speaker-volume-control-mute-icon.png</normaloff>:/Images/icons/speaker-volume-control-mute-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Mute</string>
+   </property>
+   <property name="toolTip">
+    <string>Mute (M)</string>
+   </property>
+   <property name="shortcut">
+    <string>M</string>
+   </property>
+  </action>
+  <action name="actionOpen_2">
+   <property name="icon">
+    <iconset resource="newicon.qrc">
+     <normaloff>:/Images/icons/folder_page_white.png</normaloff>:/Images/icons/folder_page_white.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Open (Ctrl+O)</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="icon">
+    <iconset resource="newicon.qrc">
+     <normaloff>:/Images/icons/deletered.png</normaloff>:/Images/icons/deletered.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="toolTip">
+    <string>Quit (Ctrl+Q)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="action0">
+   <property name="text">
+    <string>0%</string>
+   </property>
+  </action>
+  <action name="action10">
+   <property name="text">
+    <string>10%</string>
+   </property>
+  </action>
+  <action name="action20">
+   <property name="text">
+    <string>20%</string>
+   </property>
+  </action>
+  <action name="action30">
+   <property name="text">
+    <string>30%</string>
+   </property>
+  </action>
+  <action name="action40">
+   <property name="text">
+    <string>40%</string>
+   </property>
+  </action>
+  <action name="action50">
+   <property name="text">
+    <string>50%</string>
+   </property>
+  </action>
+  <action name="action60">
+   <property name="text">
+    <string>60%</string>
+   </property>
+  </action>
+  <action name="action70">
+   <property name="text">
+    <string>70%</string>
+   </property>
+  </action>
+  <action name="action80">
+   <property name="text">
+    <string>80%</string>
+   </property>
+  </action>
+  <action name="action90">
+   <property name="text">
+    <string>90%</string>
+   </property>
+  </action>
+  <action name="action100">
+   <property name="text">
+    <string>100%</string>
+   </property>
+  </action>
+  <action name="actionColor_Options">
+   <property name="text">
+    <string>Color Options</string>
+   </property>
+  </action>
+  <action name="actionPlaylists">
+   <property name="icon">
+    <iconset resource="newicon.qrc">
+     <normaloff>:/Images/icons/Playlist.png</normaloff>:/Images/icons/Playlist.png</iconset>
+   </property>
+   <property name="text">
+    <string>Playlists</string>
+   </property>
+   <property name="toolTip">
+    <string>Open Playlists (Ctrl+L)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="actionShortcut_Preview">
+   <property name="text">
+    <string>Hot Keys</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="newicon.qrc"/>
+ </resources>
+ <connections/>
+</ui>
