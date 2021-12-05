@@ -279,7 +279,7 @@ void MainWindow::onFileAdded(QString file) { addItem(file); }
 void MainWindow::on_listView_clicked(const QModelIndex &index) {
   position = index.row();
   if (hasNextTrack()) {
-    audio->play(tracklist.at(position)->path,1);
+    audio->play(tracklist.at(position)->path,0);
   }
 }
 
@@ -386,4 +386,12 @@ void MainWindow::on_pushButton_clicked()
 //    audio->play("https://usa19.fastcast4u.com:2000/");
 
 audio->play("http://185.33.21.112:80/rockclassics_64",1);
+}
+
+void MainWindow::on_pushButton_play_clicked()
+{
+//    if (hasNextTrack()) {
+//      player->play();
+//      audio->playOrPause(tracklist.at(position)->path);
+//    }
 }
