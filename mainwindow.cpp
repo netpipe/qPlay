@@ -114,10 +114,12 @@ void MainWindow::stopScanner() {
   }
 }
 
-void MainWindow::onFindMusic() {
+void MainWindow::onFindMusic(QString directory) {
   stopScanner();
-  QString dirMusic = QDir::homePath() + "/" +
-                     QStandardPaths::displayName(QStandardPaths::MusicLocation);
+  QString dirMusic = directory;
+
+//          QDir::homePath() + "/" +
+//                     QStandardPaths::displayName(QStandardPaths::MusicLocation);
 
   scanner = new Scanner(dirMusic, this);
   connect(scanner, SIGNAL(fileAdded(QString)), this,
@@ -351,7 +353,8 @@ void MainWindow::on_LoadPlaylist_clicked() {
 
 
 
-void MainWindow::on_actionScan_triggered() { onFindMusic(); }
+void MainWindow::on_actionScan_triggered() { onFindMusic( QDir::homePath() + "/Music" );  //+  QStandardPaths::displayName(QStandardPaths::MusicLocation)
+                                           }
 
 void MainWindow::on_actionClear_triggered() { onClearList(); }
 
@@ -394,4 +397,11 @@ void MainWindow::on_pushButton_play_clicked()
       audio->playOrPause(tracklist.at(position)->path);
       // audio->playOrPause(tracklist.at(20.0f)->path);
     }
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    onFindMusic("./");
+    //          QDir::homePath() + "/" +
+    //                     QStandardPaths::displayName(QStandardPaths::MusicLocation);
 }

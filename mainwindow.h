@@ -64,7 +64,7 @@ public slots:
   void onSlidertime(QString sliderduration, qint64 duration, qint64 progress);
   void onFileAdded(QString file);
   void onClearList();
-  void onFindMusic();
+  void onFindMusic(QString);
 private slots:
   void on_closeButton_clicked();
   void on_pushButton_repeat_clicked();
@@ -94,6 +94,8 @@ private slots:
   void on_pushButton_clicked();
 
   void on_pushButton_play_clicked();
+
+  void on_pushButton_2_clicked();
 
 private:
   Ui::MainWindow *ui;

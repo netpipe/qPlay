@@ -540,6 +540,19 @@ QScrollBar::handle {
          <string>PushButton</string>
         </property>
        </widget>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>410</y>
+          <width>91</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>PushButton</string>
+        </property>
+       </widget>
        <zorder>label_bgr</zorder>
        <zorder>verticalLayoutWidget</zorder>
        <zorder>label_3</zorder>
@@ -549,6 +562,7 @@ QScrollBar::handle {
        <zorder>horizontalSlider</zorder>
        <zorder>vidplayer</zorder>
        <zorder>pushButton</zorder>
+       <zorder>pushButton_2</zorder>
       </widget>
      </widget>
     </item>
