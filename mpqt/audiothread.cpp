@@ -112,8 +112,8 @@ void AudioThread::play(QString filename) {
   addToPlaylist(urls);
   m_playlist->setCurrentIndex(0);
   m_player->setPosition(0);
-  m_player->setMedia(QUrl::fromLocalFile(filename));
-  // m_player->setMedia(url);
+ // m_player->setMedia(QUrl::fromLocalFile(filename));
+   m_player->setMedia(url);
   qDebug() << "Play file:" + filename;
   endOfMusic = false;
   m_player->play();

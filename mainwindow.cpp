@@ -53,6 +53,14 @@ MainWindow::MainWindow(QWidget *parent)
           SLOT(onCurPos(double, double)));
   connect(audio, SIGNAL(sliderTime(QString, qint64, qint64)), this,
           SLOT(onSlidertime(QString, qint64, qint64)));
+
+
+    //QVideoWidget* vidplayer = new QVideoWidget;
+
+ // player->setVideoOutput(vidplayer);
+
+//  vidplayer->show();
+
 }
 
 MainWindow::~MainWindow() { delete ui; }
@@ -188,7 +196,7 @@ void MainWindow::nextTrack(bool next) {
 }
 
 void MainWindow::onPauseOfPlayback() {
-  ui->pushButton_play->setIcon(QIcon(":/Resource/img/btn_play.png"));
+  ui->pushButton_play->setIcon(QIcon("./Resource/img/btn_play.png"));
   ui->pushButton_play->setIcon(QIcon("./Resource/img/btn_play.png"));
 }
 
@@ -299,6 +307,50 @@ void MainWindow::on_LoadPlaylist_clicked() {
   }
 }
 
+//void MainWindow::on_SavePlaylist_clicked()
+//{
+
+//    QFile file2("./presets/"+ ui->savePreset->text().toLatin1() + ".preset");
+//        if(file2.open(QIODevice::ReadWrite | QIODevice::Text))// QIODevice::Append |
+//        {
+//                QTextStream stream(&file2);
+//           //     file2.seek(0);
+
+//                   stream << "CompAttLE:" << ui->CompAttLE->text().toLatin1()<< endl;
+
+//                   file2.close();
+//            }
+//}
+
+//void MainWindow::on_LoadPlaylist_clicked()
+//{
+//    //https://stackoverflow.com/questions/31384273/how-to-search-for-a-string-in-a-text-file-using-qt
+//        QString searchString(":");
+//        QFile MyFile(ui->SelectPresetCMB->currentText());
+//        MyFile.open(QIODevice::ReadWrite);
+//        QTextStream in (&MyFile);
+//        QString line;
+//      //  int ii=0;
+//        QStringList list;
+//         //   QList<QString> nums;
+//        QStringList nums;
+
+
+//        do {
+//            line = in.readLine();
+//            searchString=":";
+//            if (line.contains(searchString)) { //, Qt::CaseSensitive
+//                // do something
+//                QRegExp rx("[:]");// match a comma or a space
+//                list = line.split(rx);
+//                nums.append(list.at(1).toLatin1());
+//            }
+//        } while (!line.isNull());
+      //ui->CompAttLE->setText(nums.at(0));
+//}
+
+
+
 void MainWindow::on_actionScan_triggered() { onFindMusic(); }
 
 void MainWindow::on_actionClear_triggered() { onClearList(); }
@@ -327,4 +379,11 @@ void MainWindow::on_horizontalSlider_2_sliderMoved(int position) {
 void MainWindow::on_horizontalSlider_sliderMoved(int position)
 {
 audio->setvolume(position);
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+//    audio->play("https://usa19.fastcast4u.com:2000/");
+
+audio->play("http://185.33.21.112:80/rockclassics_64");
 }

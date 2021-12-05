@@ -4,6 +4,7 @@
 #include <QMainWindow>
 
 #include <QMediaPlayer>
+//#include <QVideoWidget>
 
 #include <QDropEvent>
 #include <QMimeData>
@@ -31,6 +32,7 @@ public:
   ~MainWindow();
 
   QMediaPlayer *player;
+//  QVideoWidget *vidplayer;
   void playsound(QString test);
 
   TrackModel *trackModel;
@@ -88,6 +90,8 @@ private slots:
   void on_horizontalSlider_2_sliderMoved(int position);
 
   void on_horizontalSlider_sliderMoved(int position);
+
+  void on_pushButton_clicked();
 
 private:
   Ui::MainWindow *ui;
