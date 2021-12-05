@@ -54,12 +54,15 @@ MainWindow::MainWindow(QWidget *parent)
   connect(audio, SIGNAL(sliderTime(QString, qint64, qint64)), this,
           SLOT(onSlidertime(QString, qint64, qint64)));
 
+ player = new QMediaPlayer(this);
+   // QVideoWidget*
+     //       vidplayer = new QVideoWidget;
+//vidwid
+  audio->setVideoOutput(ui->vidwid);
 
-    //QVideoWidget* vidplayer = new QVideoWidget;
-
- // player->setVideoOutput(vidplayer);
-
-//  vidplayer->show();
+ // ui->vidwid
+//this->setCentralWidget(vidplayer);
+ // vidplayer->show();
 
 }
 

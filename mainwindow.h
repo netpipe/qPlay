@@ -4,7 +4,7 @@
 #include <QMainWindow>
 
 #include <QMediaPlayer>
-//#include <QVideoWidget>
+#include <QVideoWidget>
 
 #include <QDropEvent>
 #include <QMimeData>
@@ -32,7 +32,7 @@ public:
   ~MainWindow();
 
   QMediaPlayer *player;
-//  QVideoWidget *vidplayer;
+  QVideoWidget *vidplayer;
   void playsound(QString test);
 
   TrackModel *trackModel;

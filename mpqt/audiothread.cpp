@@ -43,6 +43,13 @@ AudioThread::AudioThread(QObject *parent) : QThread(parent) {
   endOfMusic = true;
 }
 
+
+void AudioThread::setVideoOutput(QVideoWidget *test){
+
+m_player->setVideoOutput(test);
+
+}
+
 void AudioThread::durationChanged(qint64 duration) {
   m_duration = duration / 1000;
 }

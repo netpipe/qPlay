@@ -517,7 +517,7 @@ QScrollBar::handle {
          <enum>Qt::Horizontal</enum>
         </property>
        </widget>
-       <widget class="QWidget" name="vidplayer" native="true">
+       <widget class="QVideoWidget" name="vidwid" native="true">
         <property name="geometry">
          <rect>
           <x>100</x>
@@ -560,7 +560,7 @@ QScrollBar::handle {
        <zorder>listView</zorder>
        <zorder>verticalLayoutWidget_2</zorder>
        <zorder>horizontalSlider</zorder>
-       <zorder>vidplayer</zorder>
+       <zorder>vidwid</zorder>
        <zorder>pushButton</zorder>
        <zorder>pushButton_2</zorder>
       </widget>
@@ -641,6 +641,14 @@ QScrollBar::handle {
    </property>
   </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QVideoWidget</class>
+   <extends>QWidget</extends>
+   <header>QVideoWidget</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

@@ -6,6 +6,8 @@
 #include <QMediaPlayer>
 #include <QMediaPlaylist>
 #include <QAudio>
+#include <QVideoWidget>
+
 
 QT_BEGIN_NAMESPACE
 class QMediaPlayer;
@@ -50,6 +52,7 @@ signals:
     void sliderTime(QString sliderduration, qint64 duration,qint64 progress);
 public slots:
     void play(QString filepath,bool online);
+    void setVideoOutput(QVideoWidget *test);
     void playOrPause(QString filepath);
     void pause();
     void resume();
