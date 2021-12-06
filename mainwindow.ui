@@ -574,107 +574,229 @@ QScrollBar::handle {
           <property name="title">
            <string>GroupBox</string>
           </property>
-          <widget class="QListWidget" name="txtIds">
-           <property name="geometry">
-            <rect>
-             <x>20</x>
-             <y>40</y>
-             <width>121</width>
-             <height>301</height>
-            </rect>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="pushButton_3">
-           <property name="geometry">
-            <rect>
-             <x>520</x>
-             <y>350</y>
-             <width>91</width>
-             <height>27</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>Search</string>
-           </property>
-          </widget>
-          <widget class="QListWidget" name="txtNames">
-           <property name="geometry">
-            <rect>
-             <x>160</x>
-             <y>40</y>
-             <width>256</width>
-             <height>192</height>
-            </rect>
-           </property>
-          </widget>
-          <widget class="QTreeWidget" name="treeWidget">
-           <property name="geometry">
-            <rect>
-             <x>790</x>
-             <y>260</y>
-             <width>256</width>
-             <height>192</height>
-            </rect>
-           </property>
-           <column>
-            <property name="text">
-             <string>1</string>
-            </property>
-           </column>
-           <item>
-            <property name="text">
-             <string>New Item</string>
-            </property>
-            <item>
-             <property name="text">
-              <string>New Subitem</string>
-             </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="1" column="2">
+            <widget class="QListWidget" name="listWidget">
              <item>
               <property name="text">
-               <string>New Subitem</string>
+               <string>45984</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>548</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>498</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>&quot;152&quot;</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>&quot;152&quot;</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QPushButton" name="chooseStationbtn">
+             <property name="text">
+              <string>ChooseStation</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1" rowspan="4">
+            <widget class="QListWidget" name="txtNames"/>
+           </item>
+           <item row="0" column="0">
+            <widget class="QComboBox" name="comboBox">
+             <item>
+              <property name="text">
+               <string>Alternative</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Blues</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Classical</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Country</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Easy Listening</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Electronic</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Folk</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Themes</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Rap</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Inspirational</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>International</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Jazz</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Latin</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Metal</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>New Age</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Decades</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Pop</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>R&amp;B and Urban</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Reggae</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Rock</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Seasonal and Holiday</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Soundtracks</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Talk</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Misc</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Public Radio</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QPushButton" name="pushButton_3">
+             <property name="text">
+              <string>Search</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLineEdit" name="stationSearch"/>
+           </item>
+           <item row="1" column="0" rowspan="4">
+            <widget class="QListWidget" name="txtIds">
+             <property name="sizeAdjustPolicy">
+              <enum>QAbstractScrollArea::AdjustToContents</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="4" rowspan="3">
+            <widget class="QTreeWidget" name="treeWidget">
+             <column>
+              <property name="text">
+               <string>1</string>
+              </property>
+             </column>
+             <item>
+              <property name="text">
+               <string>New Item</string>
               </property>
               <item>
                <property name="text">
                 <string>New Subitem</string>
                </property>
+               <item>
+                <property name="text">
+                 <string>New Subitem</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>New Subitem</string>
+                 </property>
+                </item>
+               </item>
               </item>
              </item>
-            </item>
+            </widget>
            </item>
-          </widget>
-          <widget class="QLineEdit" name="lineEdit">
-           <property name="geometry">
-            <rect>
-             <x>440</x>
-             <y>260</y>
-             <width>271</width>
-             <height>27</height>
-            </rect>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="chooseStationbtn">
-           <property name="geometry">
-            <rect>
-             <x>200</x>
-             <y>390</y>
-             <width>171</width>
-             <height>27</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>ChooseStation</string>
-           </property>
-          </widget>
-          <widget class="QListWidget" name="listWidget">
-           <property name="geometry">
-            <rect>
-             <x>450</x>
-             <y>50</y>
-             <width>256</width>
-             <height>192</height>
-            </rect>
-           </property>
-          </widget>
+           <item row="3" column="3">
+            <widget class="QPushButton" name="refreshbtn">
+             <property name="text">
+              <string>refresh</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </item>
        </layout>

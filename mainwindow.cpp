@@ -414,10 +414,33 @@ void MainWindow::on_pushButton_2_clicked()
 void MainWindow::on_pushButton_3_clicked()
 {
 
-    dlmanager->Download("http://api.shoutcast.com/legacy/Top500?k=F5NaL5p4avjtIaoy");
+    //http://api.shoutcast.com/legacy/genresearch?k=F5NaL5p4avjtIaoy&genre=classic&limit=X,Y
 
-    QString fileName = "./Top500";
-    QFile file(fileName);
+QString url2 = "http://api.shoutcast.com/legacy/stationsearch?k=F5NaL5p4avjtIaoy&search=";  //ambient+beats
+        url2+= ui->stationSearch->text().toLatin1();
+        url2+= "&limit=1,10";
+
+        QString fileName = "./stationsearch";
+        QFile file2(fileName);
+            file2.remove();
+            file2.close();
+
+   // dlmanager->Download("http://api.shoutcast.com/legacy/Top500?k=F5NaL5p4avjtIaoy");
+    dlmanager->Download(url2.toLatin1());
+
+//    QThread::sleep(3);
+//qDebug() << "testing\n";
+
+//parseSearch();
+
+}
+
+void MainWindow::parseSearch(){
+qDebug() << "testing\n";
+
+QString fileName = "./stationsearch";
+QFile file(fileName);
+  //  file.remove();
     file.open(QIODevice::ReadOnly);
     QString s;
 
@@ -458,27 +481,33 @@ void MainWindow::on_pushButton_3_clicked()
             pos += strId.length();
         }
     }
-
+ui->txtNames->clear();
     QString buf = "";
     int count = namelist.count();
     for (int i = 0; i < count; i ++)
     {
-        buf += namelist.at(i);
-        buf += "\r\n";
+        buf = namelist.at(i);
+          buf.remove('"');
+        ui->txtNames->addItem(buf);
+
+   //     buf += "\r\n";
     }
    // ui->txtNames->setPlainText(buf);
-    ui->txtNames->addItem(buf);
+  //  ui->txtNames->addItem(buf);
+  //  ui->txtNames->(buf);
 
-
+ui->txtIds->clear();
     buf = "";
     count = idlist.count();
     for (int i = 0; i < count; i ++)
     {
-        buf += idlist.at(i);
-        buf += "\r\n";
+        buf = idlist.at(i);
+      //  buf += "\r\n";
+        buf.remove('"');
+           ui->txtIds->addItem(buf);
+
     }
   //  ui->txtIds->setPlainText(buf);
-     ui->txtIds->addItem(buf);
 
 
 }
@@ -486,10 +515,45 @@ void MainWindow::on_pushButton_3_clicked()
 void MainWindow::on_chooseStationbtn_clicked()
 {
    // ui->txtIds->addItem(buf);
-  //  dlmanager->Download("http://yp.shoutcast.com/sbin/tunein-station.pls?id=1729455");
+    QString url2 = "http://yp.shoutcast.com/sbin/tunein-station.pls?id=";
+            url2 +=    ui->txtIds->currentItem()->text().toLatin1();
+
+    dlmanager->Download(url2);
+
+    //parse data
+
+//    tunein-station.pls
+
+
+//audio->play("http://185.33.21.112:80/rockclassics_64",1);
 }
 
-void MainWindow::on_txtNames_clicked(const QModelIndex &index)
+
+void MainWindow::on_txtIds_currentRowChanged(int currentRow)
 {
-    // set id selection
+
+}
+
+void MainWindow::on_comboBox_currentIndexChanged(const QString &arg1)
+{
+
+    //http://api.shoutcast.com/legacy/genresearch?k=F5NaL5p4avjtIaoy&genre=classic&limit=X,Y
+
+
+    QString url2 = "http://api.shoutcast.com/legacy/stationsearch?k=F5NaL5p4avjtIaoy&search=";  //ambient+beats
+            url2+= ui->stationSearch->text().toLatin1();
+            url2+= "&limit=1,10";
+
+       // dlmanager->Download("http://api.shoutcast.com/legacy/Top500?k=F5NaL5p4avjtIaoy");
+      //  dlmanager->Download(url2.toLatin1());
+}
+
+void MainWindow::on_refreshbtn_clicked()
+{
+    parseSearch();
+}
+
+void MainWindow::on_txtNames_currentRowChanged(int currentRow)
+{
+        ui->txtIds->setCurrentRow(currentRow);
 }

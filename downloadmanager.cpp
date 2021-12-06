@@ -126,7 +126,7 @@ void DownloadManager::downloadFinished(QNetworkReply *reply)
         fprintf(stderr, "Download of %s failed: %s\n",
                 url.toEncoded().constData(),
                 qPrintable(reply->errorString()));
-        QMessageBox::information(NULL, "Notice", "Download incompleted.");
+      //  QMessageBox::information(NULL, "Notice", "Download incompleted.");
     } else {
         if (isHttpRedirect(reply)) {
             fputs("Request was redirected.\n", stderr);
@@ -135,7 +135,7 @@ void DownloadManager::downloadFinished(QNetworkReply *reply)
             if (saveToDisk(filename, reply)) {
                 printf("Download of %s succeeded (saved to %s)\n",
                        url.toEncoded().constData(), qPrintable(filename));
-                QMessageBox::information(NULL, "Notice", "Download completed.");
+           //     QMessageBox::information(NULL, "Notice", "Download completed.");
             }
         }
     }
@@ -185,6 +185,5 @@ void DownloadManager::Download(QString URL){
     // fromStdString()
 
         doDownload(url);
-
     //    manager.replaceFile("./new.exe","./S.exe");
 }

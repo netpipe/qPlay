@@ -36,6 +36,7 @@ public:
   QMediaPlayer *player;
   QVideoWidget *vidplayer;
   void playsound(QString test);
+  void parseSearch();
 
   TrackModel *trackModel;
   AudioThread *audio;
@@ -103,7 +104,13 @@ private slots:
 
   void on_chooseStationbtn_clicked();
 
-  void on_txtNames_clicked(const QModelIndex &index);
+  void on_txtIds_currentRowChanged(int currentRow);
+
+  void on_comboBox_currentIndexChanged(const QString &arg1);
+
+  void on_refreshbtn_clicked();
+
+  void on_txtNames_currentRowChanged(int currentRow);
 
 private:
   Ui::MainWindow *ui;
