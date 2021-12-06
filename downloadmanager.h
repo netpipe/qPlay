@@ -18,6 +18,7 @@ class DownloadManager: public QObject
     QNetworkAccessManager manager;
     QVector<QNetworkReply *> currentDownloads;
 
+    QString savefiletmp;
 public:
     DownloadManager();
     void doDownload(const QUrl &url);

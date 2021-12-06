@@ -574,7 +574,7 @@ QScrollBar::handle {
           <property name="title">
            <string>GroupBox</string>
           </property>
-          <widget class="QListWidget" name="listWidget">
+          <widget class="QListWidget" name="txtIds">
            <property name="geometry">
             <rect>
              <x>20</x>
@@ -597,7 +597,7 @@ QScrollBar::handle {
             <string>Search</string>
            </property>
           </widget>
-          <widget class="QListWidget" name="listWidget_2">
+          <widget class="QListWidget" name="txtNames">
            <property name="geometry">
             <rect>
              <x>160</x>
@@ -610,8 +610,8 @@ QScrollBar::handle {
           <widget class="QTreeWidget" name="treeWidget">
            <property name="geometry">
             <rect>
-             <x>470</x>
-             <y>30</y>
+             <x>790</x>
+             <y>260</y>
              <width>256</width>
              <height>192</height>
             </rect>
@@ -645,10 +645,33 @@ QScrollBar::handle {
           <widget class="QLineEdit" name="lineEdit">
            <property name="geometry">
             <rect>
-             <x>470</x>
-             <y>300</y>
-             <width>113</width>
+             <x>440</x>
+             <y>260</y>
+             <width>271</width>
              <height>27</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="chooseStationbtn">
+           <property name="geometry">
+            <rect>
+             <x>200</x>
+             <y>390</y>
+             <width>171</width>
+             <height>27</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>ChooseStation</string>
+           </property>
+          </widget>
+          <widget class="QListWidget" name="listWidget">
+           <property name="geometry">
+            <rect>
+             <x>450</x>
+             <y>50</y>
+             <width>256</width>
+             <height>192</height>
             </rect>
            </property>
           </widget>

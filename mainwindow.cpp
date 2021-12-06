@@ -3,6 +3,7 @@
 
 #include <QFileDialog>
 #include <QStandardPaths>
+#include <QTextStream>
 
 //#include <player.h>
 
@@ -64,6 +65,7 @@ MainWindow::MainWindow(QWidget *parent)
 //this->setCentralWidget(vidplayer);
  // vidplayer->show();
 
+  dlmanager = new DownloadManager;
 }
 
 MainWindow::~MainWindow() { delete ui; }
@@ -411,58 +413,83 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_pushButton_3_clicked()
 {
-//    QString inputstring = ui->txtInput->toPlainText();
 
-//    QRegExp regex;
-//    regex.setPattern("name=\\\"([^\\\"]+)\\\"");
+    dlmanager->Download("http://api.shoutcast.com/legacy/Top500?k=F5NaL5p4avjtIaoy");
 
-//    QStringList namelist, idlist;
-//    int pos = 0;
-//    while (pos >= 0)
-//    {
-//        pos = regex.indexIn(inputstring, pos);
+    QString fileName = "./Top500";
+    QFile file(fileName);
+    file.open(QIODevice::ReadOnly);
+    QString s;
 
-//        if (pos >= 0)
-//        {
-//            QString strName = regex.cap(0);
-//            strName = strName.mid(5);
-//            namelist.push_back(strName);
-//            pos += strName.length();
-//        }
-//    }
-
-//    regex.setPattern("id=\\\"([0-9]+)\\\"");
-//    pos = 0;
-//    while (pos >= 0)
-//    {
-//        pos = regex.indexIn(inputstring, pos);
-//        if (pos >= 0)
-//        {
-//            QString strId = regex.cap(0);
-//            strId = strId.mid(3);
-//            idlist.push_back(strId);
-//            pos += strId.length();
-//        }
-//    }
-
-//    QString buf = "";
-//    int count = namelist.count();
-//    for (int i = 0; i < count; i ++)
-//    {
-//        buf += namelist.at(i);
-//        buf += "\r\n";
-//    }
-//    ui->txtNames->setPlainText(buf);
+    QTextStream s1(&file);
+    s.append(s1.readAll());
 
 
-//    buf = "";
-//    count = idlist.count();
-//    for (int i = 0; i < count; i ++)
-//    {
-//        buf += idlist.at(i);
-//        buf += "\r\n";
-//    }
-//    ui->txtIds->setPlainText(buf);
+    QString inputstring = s; //ui->txtInput->toPlainText();
+
+    QRegExp regex;
+    regex.setPattern("name=\\\"([^\\\"]+)\\\"");
+
+    QStringList namelist, idlist;
+    int pos = 0;
+    while (pos >= 0)
+    {
+        pos = regex.indexIn(inputstring, pos);
+
+        if (pos >= 0)
+        {
+            QString strName = regex.cap(0);
+            strName = strName.mid(5);
+            namelist.push_back(strName);
+            pos += strName.length();
+        }
+    }
+
+    regex.setPattern("id=\\\"([0-9]+)\\\"");
+    pos = 0;
+    while (pos >= 0)
+    {
+        pos = regex.indexIn(inputstring, pos);
+        if (pos >= 0)
+        {
+            QString strId = regex.cap(0);
+            strId = strId.mid(3);
+            idlist.push_back(strId);
+            pos += strId.length();
+        }
+    }
+
+    QString buf = "";
+    int count = namelist.count();
+    for (int i = 0; i < count; i ++)
+    {
+        buf += namelist.at(i);
+        buf += "\r\n";
+    }
+   // ui->txtNames->setPlainText(buf);
+    ui->txtNames->addItem(buf);
 
 
+    buf = "";
+    count = idlist.count();
+    for (int i = 0; i < count; i ++)
+    {
+        buf += idlist.at(i);
+        buf += "\r\n";
+    }
+  //  ui->txtIds->setPlainText(buf);
+     ui->txtIds->addItem(buf);
+
+
+}
+
+void MainWindow::on_chooseStationbtn_clicked()
+{
+   // ui->txtIds->addItem(buf);
+  //  dlmanager->Download("http://yp.shoutcast.com/sbin/tunein-station.pls?id=1729455");
+}
+
+void MainWindow::on_txtNames_clicked(const QModelIndex &index)
+{
+    // set id selection
 }

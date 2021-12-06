@@ -61,6 +61,7 @@ QString DownloadManager::saveFileName(const QUrl &url)
         basename += QString::number(i);
     }
 
+  //  basename = savefiletmp.toLatin1();
     return basename;
 }
 

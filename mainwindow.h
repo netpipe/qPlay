@@ -18,6 +18,8 @@
 #include "mpqt/trackdelegate.h"
 #include "mpqt/trackmodel.h"
 
+#include <downloadmanager.h>
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -99,9 +101,14 @@ private slots:
 
   void on_pushButton_3_clicked();
 
+  void on_chooseStationbtn_clicked();
+
+  void on_txtNames_clicked(const QModelIndex &index);
+
 private:
   Ui::MainWindow *ui;
 
   QString m_trackDuration;
+  DownloadManager *dlmanager;
 };
 #endif // MAINWINDOW_H
