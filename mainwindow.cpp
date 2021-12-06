@@ -515,22 +515,29 @@ ui->txtIds->clear();
 void MainWindow::on_chooseStationbtn_clicked()
 {
    // ui->txtIds->addItem(buf);
-    QString url2 = "http://yp.shoutcast.com/sbin/tunein-station.pls?id=";
-            url2 +=    ui->txtIds->currentItem()->text().toLatin1();
+  //  QString url2 = "http://yp.shoutcast.com/sbin/tunein-station.pls?id=";
+  //          url2 +=    ui->txtIds->currentItem()->text().toLatin1();
 
-    dlmanager->Download(url2);
+  //  dlmanager->Download(url2);
 
     //parse data
 
 //    tunein-station.pls
-
+"(http|https)://[a-zA-Z0-9./?=_%:-]*"
 
 //audio->play("http://185.33.21.112:80/rockclassics_64",1);
+    audio->play("http://185.33.21.112:80/rockclassics_64",1);
+
 }
 
 
 void MainWindow::on_txtIds_currentRowChanged(int currentRow)
 {
+ //download playlist
+    QString url2 = "https://yp.shoutcast.com/sbin/tunein-station.pls?id=";
+            url2 +=    ui->txtIds->currentItem()->text().toLatin1();
+
+    dlmanager->Download(url2);
 
 }
 

@@ -537,7 +537,7 @@ QScrollBar::handle {
          </rect>
         </property>
         <property name="text">
-         <string>PushButton</string>
+         <string>RadioStation</string>
         </property>
        </widget>
        <widget class="QPushButton" name="pushButton_2">
@@ -550,7 +550,33 @@ QScrollBar::handle {
          </rect>
         </property>
         <property name="text">
-         <string>PushButton</string>
+         <string>FindMusic ./</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>350</y>
+          <width>91</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>OpenFolder</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>440</y>
+          <width>91</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>OpenFile</string>
         </property>
        </widget>
        <zorder>label_bgr</zorder>
@@ -563,6 +589,8 @@ QScrollBar::handle {
        <zorder>vidwid</zorder>
        <zorder>pushButton</zorder>
        <zorder>pushButton_2</zorder>
+       <zorder>pushButton_4</zorder>
+       <zorder>pushButton_5</zorder>
       </widget>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -572,49 +600,76 @@ QScrollBar::handle {
         <item row="0" column="0">
          <widget class="QGroupBox" name="groupBox">
           <property name="title">
-           <string>GroupBox</string>
+           <string>ShoutCast</string>
           </property>
           <layout class="QGridLayout" name="gridLayout_2">
-           <item row="1" column="2">
-            <widget class="QListWidget" name="listWidget">
+           <item row="3" column="2">
+            <widget class="QLineEdit" name="stationSearch"/>
+           </item>
+           <item row="4" column="3">
+            <widget class="QPushButton" name="refreshbtn">
+             <property name="text">
+              <string>refresh</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="4" rowspan="3">
+            <widget class="QTreeWidget" name="treeWidget">
+             <column>
+              <property name="text">
+               <string>1</string>
+              </property>
+             </column>
              <item>
               <property name="text">
-               <string>45984</string>
+               <string>New Item</string>
               </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>548</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>498</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>&quot;152&quot;</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>&quot;152&quot;</string>
-              </property>
+              <item>
+               <property name="text">
+                <string>New Subitem</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string>New Subitem</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>New Subitem</string>
+                 </property>
+                </item>
+               </item>
+              </item>
              </item>
             </widget>
            </item>
-           <item row="4" column="2">
+           <item row="1" column="2" colspan="2">
+            <widget class="QListWidget" name="stationurls"/>
+           </item>
+           <item row="1" column="1" rowspan="5">
+            <widget class="QListWidget" name="txtNames"/>
+           </item>
+           <item row="5" column="2">
             <widget class="QPushButton" name="chooseStationbtn">
              <property name="text">
               <string>ChooseStation</string>
              </property>
             </widget>
            </item>
-           <item row="1" column="1" rowspan="4">
-            <widget class="QListWidget" name="txtNames"/>
+           <item row="1" column="0" rowspan="5">
+            <widget class="QListWidget" name="txtIds">
+             <property name="sizeAdjustPolicy">
+              <enum>QAbstractScrollArea::AdjustToContents</enum>
+             </property>
+            </widget>
            </item>
-           <item row="0" column="0">
+           <item row="4" column="2">
+            <widget class="QPushButton" name="pushButton_3">
+             <property name="text">
+              <string>Search</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2" colspan="2">
             <widget class="QComboBox" name="comboBox">
              <item>
               <property name="text">
@@ -741,59 +796,6 @@ QScrollBar::handle {
                <string>Public Radio</string>
               </property>
              </item>
-            </widget>
-           </item>
-           <item row="3" column="2">
-            <widget class="QPushButton" name="pushButton_3">
-             <property name="text">
-              <string>Search</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="2">
-            <widget class="QLineEdit" name="stationSearch"/>
-           </item>
-           <item row="1" column="0" rowspan="4">
-            <widget class="QListWidget" name="txtIds">
-             <property name="sizeAdjustPolicy">
-              <enum>QAbstractScrollArea::AdjustToContents</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="4" rowspan="3">
-            <widget class="QTreeWidget" name="treeWidget">
-             <column>
-              <property name="text">
-               <string>1</string>
-              </property>
-             </column>
-             <item>
-              <property name="text">
-               <string>New Item</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-                <item>
-                 <property name="text">
-                  <string>New Subitem</string>
-                 </property>
-                </item>
-               </item>
-              </item>
-             </item>
-            </widget>
-           </item>
-           <item row="3" column="3">
-            <widget class="QPushButton" name="refreshbtn">
-             <property name="text">
-              <string>refresh</string>
-             </property>
             </widget>
            </item>
           </layout>
