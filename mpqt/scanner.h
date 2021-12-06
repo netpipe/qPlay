@@ -34,7 +34,19 @@ public:
         fileList << entry;
         emit fileCountChanged(fileList.count());
         emit fileAdded(iterator.fileInfo().absoluteFilePath());
-      } else {
+      }
+      if (iterator.fileInfo().suffix().toLower() == "flv") {
+        qDebug() << "scanner" << iterator.fileInfo().absoluteFilePath();
+        fileList << entry;
+        emit fileCountChanged(fileList.count());
+        emit fileAdded(iterator.fileInfo().absoluteFilePath());
+      }
+      if (iterator.fileInfo().suffix().toLower() == "webm") {
+        qDebug() << "scanner" << iterator.fileInfo().absoluteFilePath();
+        fileList << entry;
+        emit fileCountChanged(fileList.count());
+        emit fileAdded(iterator.fileInfo().absoluteFilePath());
+      }else {
         // qDebug() << QFileInfo(entry).fileName();
       }
     }

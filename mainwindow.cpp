@@ -408,3 +408,61 @@ void MainWindow::on_pushButton_2_clicked()
     //          QDir::homePath() + "/" +
     //                     QStandardPaths::displayName(QStandardPaths::MusicLocation);
 }
+
+void MainWindow::on_pushButton_3_clicked()
+{
+//    QString inputstring = ui->txtInput->toPlainText();
+
+//    QRegExp regex;
+//    regex.setPattern("name=\\\"([^\\\"]+)\\\"");
+
+//    QStringList namelist, idlist;
+//    int pos = 0;
+//    while (pos >= 0)
+//    {
+//        pos = regex.indexIn(inputstring, pos);
+
+//        if (pos >= 0)
+//        {
+//            QString strName = regex.cap(0);
+//            strName = strName.mid(5);
+//            namelist.push_back(strName);
+//            pos += strName.length();
+//        }
+//    }
+
+//    regex.setPattern("id=\\\"([0-9]+)\\\"");
+//    pos = 0;
+//    while (pos >= 0)
+//    {
+//        pos = regex.indexIn(inputstring, pos);
+//        if (pos >= 0)
+//        {
+//            QString strId = regex.cap(0);
+//            strId = strId.mid(3);
+//            idlist.push_back(strId);
+//            pos += strId.length();
+//        }
+//    }
+
+//    QString buf = "";
+//    int count = namelist.count();
+//    for (int i = 0; i < count; i ++)
+//    {
+//        buf += namelist.at(i);
+//        buf += "\r\n";
+//    }
+//    ui->txtNames->setPlainText(buf);
+
+
+//    buf = "";
+//    count = idlist.count();
+//    for (int i = 0; i < count; i ++)
+//    {
+//        buf += idlist.at(i);
+//        buf += "\r\n";
+//    }
+//    ui->txtIds->setPlainText(buf);
+
+
+}
