@@ -21,7 +21,7 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_3">
-    <item row="1" column="0">
+    <item row="0" column="0">
      <widget class="QTabWidget" name="uitabwidget_2">
       <property name="currentIndex">
        <number>0</number>
@@ -579,6 +579,16 @@ QScrollBar::handle {
          <string>OpenFile</string>
         </property>
        </widget>
+       <widget class="QComboBox" name="cmbTheme">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>10</y>
+          <width>271</width>
+          <height>27</height>
+         </rect>
+        </property>
+       </widget>
        <zorder>label_bgr</zorder>
        <zorder>verticalLayoutWidget</zorder>
        <zorder>label_3</zorder>
@@ -591,6 +601,7 @@ QScrollBar::handle {
        <zorder>pushButton_2</zorder>
        <zorder>pushButton_4</zorder>
        <zorder>pushButton_5</zorder>
+       <zorder>cmbTheme</zorder>
       </widget>
       <widget class="QWidget" name="tab">
        <attribute name="title">

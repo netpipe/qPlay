@@ -33,6 +33,7 @@ public:
   MainWindow(QWidget *parent = nullptr);
   ~MainWindow();
 
+      QString fileName;
   QMediaPlayer *player;
   QVideoWidget *vidplayer;
   void playsound(QString test);
@@ -112,10 +113,14 @@ private slots:
 
   void on_txtNames_currentRowChanged(int currentRow);
 
+  void on_cmbTheme_currentIndexChanged(const QString &arg1);
+void loadStyleSheet(QString sheet_name);
+
 private:
   Ui::MainWindow *ui;
 
   QString m_trackDuration;
   DownloadManager *dlmanager;
+      bool loaded=0;
 };
 #endif // MAINWINDOW_H
