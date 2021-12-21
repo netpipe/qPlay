@@ -24,7 +24,7 @@
     <item row="1" column="0">
      <widget class="QTabWidget" name="uitabwidget_2">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_5">
        <attribute name="title">
@@ -613,35 +613,6 @@ QScrollBar::handle {
              </property>
             </widget>
            </item>
-           <item row="3" column="4" rowspan="3">
-            <widget class="QTreeWidget" name="treeWidget">
-             <column>
-              <property name="text">
-               <string>1</string>
-              </property>
-             </column>
-             <item>
-              <property name="text">
-               <string>New Item</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-                <item>
-                 <property name="text">
-                  <string>New Subitem</string>
-                 </property>
-                </item>
-               </item>
-              </item>
-             </item>
-            </widget>
-           </item>
            <item row="1" column="2" colspan="2">
             <widget class="QListWidget" name="stationurls"/>
            </item>
@@ -779,6 +750,290 @@ QScrollBar::handle {
              <item>
               <property name="text">
                <string>Soundtracks</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Talk</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Misc</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Public Radio</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="1" column="4" rowspan="5">
+            <widget class="QTreeWidget" name="treeWidget">
+             <column>
+              <property name="text">
+               <string>1</string>
+              </property>
+             </column>
+             <item>
+              <property name="text">
+               <string>Alternative</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>Adult Alternative</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Britpop</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Classic</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Alternative</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>college</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Dancepunk</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Dream Pop</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Emo</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Goth</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Grunge</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Hardcore</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Indie Pop</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Indie Rock</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Industrial</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>LoFi</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Modern Rock</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>New Wave</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Noise Pop</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Post Punk</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Power Pop</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Punk</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Ska</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Xtreme</string>
+               </property>
+              </item>
+             </item>
+             <item>
+              <property name="text">
+               <string>Blues</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>Acoustic Blues</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Chicago Blues</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Contemporary Blues</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Country Blues</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Delta Blues</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Electric Blues</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Cajun and Zydeco</string>
+               </property>
+              </item>
+             </item>
+             <item>
+              <property name="text">
+               <string>Classical</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Country</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Easy Listening</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Electronic</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Folk</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Themes</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Rap</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Inspirational</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>International</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Jazz</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Latin</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Metal</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>New Age</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Decades</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Pop</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>R&amp;B and Urban</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Reggae</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Rock</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Seasonial</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>SoundTracks</string>
               </property>
              </item>
              <item>
