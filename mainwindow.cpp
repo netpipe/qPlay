@@ -523,7 +523,7 @@ void MainWindow::on_chooseStationbtn_clicked()
     //parse data
 
 //    tunein-station.pls
-"(http|https)://[a-zA-Z0-9./?=_%:-]*"
+//"(http|https)://[a-zA-Z0-9./?=_%:-]*"
 
 //audio->play("http://185.33.21.112:80/rockclassics_64",1);
     audio->play("http://185.33.21.112:80/rockclassics_64",1);
