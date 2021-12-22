@@ -758,7 +758,10 @@ void MainWindow::on_treeWidget_itemDoubleClicked(QTreeWidgetItem *item, int colu
 {
 
    ui->stationSearch->setText(ui->treeWidget->currentItem()->text(0) )  ;
-   parseSearch();
+
+   on_pushButton_3_clicked();
+
+  // parseSearch();
 }
 
 void MainWindow::on_stationurls_itemDoubleClicked(QListWidgetItem *item)
