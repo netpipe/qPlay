@@ -4,6 +4,7 @@
 #include <QFileDialog>
 #include <QStandardPaths>
 #include <QTextStream>
+#include <QTimer>
 
 //#include <player.h>
 
@@ -477,6 +478,9 @@ void MainWindow::on_pushButton_clicked()
 //    audio->play("https://usa19.fastcast4u.com:2000/");
 
 audio->play("http://185.33.21.112:80/rockclassics_64",1);
+//audio->play("http://136.32.49.56:8000",1);
+
+
 }
 
 void MainWindow::on_pushButton_play_clicked()
@@ -513,8 +517,13 @@ QString url2 = "http://api.shoutcast.com/legacy/stationsearch?k=F5NaL5p4avjtIaoy
 
 //    QThread::sleep(3);
 //qDebug() << "testing\n";
+    QTime dieTime = QTime::currentTime().addMSecs( 1000 );
+    while( QTime::currentTime() < dieTime )
+    {
+        QCoreApplication::processEvents( QEventLoop::AllEvents, 100 );
+    }
 
-//parseSearch();
+parseSearch();
 
 }
 
@@ -600,10 +609,10 @@ void MainWindow::on_chooseStationbtn_clicked()
   //     QFile::remove("tunein-station.pls");
 ui->stationurls->clear();
    // ui->txtIds->addItem(buf);
-    QString url2 = "http://yp.shoutcast.com/sbin/tunein-station.pls?id=";
-            url2 +=    ui->txtIds->currentItem()->text().toLatin1();
+ //   QString url2 = "http://yp.shoutcast.com/sbin/tunein-station.pls?id=";
+ //           url2 +=    ui->txtIds->currentItem()->text().toLatin1();
 
-    dlmanager->Download(url2);
+ //   dlmanager->Download(url2);
 
   //  QThread::sleep(1);
 
@@ -627,7 +636,7 @@ ui->stationurls->clear();
     QRegExp regex;
     //regex.setPattern("name=\\\"([^\\\"]+)\\\"");
 
-     regex.setPattern("(http|https)://[a-zA-Z0-9./?=_%:-]*");
+     regex.setPattern("(http:|http)//[a-zA-Z0-9./?=_%:-]*"); //https
     QStringList namelist, idlist;
     int pos = 0;
     while (pos >= 0)
@@ -650,7 +659,7 @@ ui->stationurls->clear();
     //    file2.remove();
      //   file2.close();
 
-        QFile::remove("tunein-station.pls");
+    //    QFile::remove("tunein-station.pls");
 
 //audio->play("http://185.33.21.112:80/rockclassics_64",1);
   //  audio->play("http://185.33.21.112:80/rockclassics_64",1);
@@ -660,53 +669,57 @@ ui->stationurls->clear();
 
 void MainWindow::on_txtIds_currentRowChanged(int currentRow)
 {
-    ui->stationurls->clear();
- //download playlist
-    QString url2 = "https://yp.shoutcast.com/sbin/tunein-station.pls?id=";
-            url2 +=    ui->txtIds->currentItem()->text().toLatin1();
+//    ui->stationurls->clear();
+// //download playlist
+//    QString url2 = "https://yp.shoutcast.com/sbin/tunein-station.pls?id=";
+//            url2 +=    ui->txtIds->currentItem()->text().toLatin1();
+//QFile::remove("tunein-station.pls");
+//    dlmanager->Download(url2);
 
-    dlmanager->Download(url2);
+//   //  QThread::sleep(2);
 
-     QThread::sleep(2);
-
-    QString filename="tunein-station.pls";
-    QFile file(filename);
-    QString line;
-   // ui->textEdit->clear();
-    if (file.open(QIODevice::ReadOnly | QIODevice::Text)){
-        QTextStream stream(&file);
-        while (!stream.atEnd()){
-            line = stream.readLine();
-            ui->textEdit->setText(ui->textEdit->toPlainText()+line+"\n");
-          //  qDebug() << "linea: "<<line;
-        }
-    }
-    file.close();
+//    QString filename="tunein-station.pls";
+//    QFile file(filename);
+//    QString line;
+//   // ui->textEdit->clear();
+//    if (file.open(QIODevice::ReadOnly | QIODevice::Text)){
+//        QTextStream stream(&file);
+//        while (!stream.atEnd()){
+//            line = stream.readLine();
+//            ui->textEdit->setText(ui->textEdit->toPlainText()+line+"\n");
+//          //  qDebug() << "linea: "<<line;
+//        }
+//    }
+//    file.close();
 
 
-    QString inputstring = ui->textEdit->toPlainText();
+//    QString inputstring = ui->textEdit->toPlainText();
 
-    QRegExp regex;
-    //regex.setPattern("name=\\\"([^\\\"]+)\\\"");
+//    QRegExp regex;
+//    //regex.setPattern("name=\\\"([^\\\"]+)\\\"");
 
-     regex.setPattern("(http|https)://[a-zA-Z0-9./?=_%:-]*");
-    QStringList namelist, idlist;
-    int pos = 0;
-    while (pos >= 0)
-    {
-        pos = regex.indexIn(inputstring, pos);
+//     regex.setPattern("(http|https)://[a-zA-Z0-9./?=_%:-]*");
+//    QStringList namelist, idlist;
+//    int pos = 0;
+//    while (pos >= 0)
+//    {
+//        pos = regex.indexIn(inputstring, pos);
 
-        if (pos >= 0)
-        {
-            QString strName = regex.cap(0);
-            strName = strName.mid(5);
-            namelist.push_back(strName);
-                ui->stationurls->addItem(strName);
-            pos += strName.length();
-        }
-    }
+//        if (pos >= 0)
+//        {
+//            QString strName = regex.cap(0);
+//            strName = strName.mid(5);
+//            namelist.push_back(strName);
+//                ui->stationurls->addItem(strName);
+//            pos += strName.length();
+//        }
+//    }
 
 QFile::remove("tunein-station.pls");
+QString url2 = "http://yp.shoutcast.com/sbin/tunein-station.pls?id=";
+        url2 +=    ui->txtIds->currentItem()->text().toLatin1();
+
+dlmanager->Download(url2);
 }
 
 void MainWindow::on_comboBox_currentIndexChanged(const QString &arg1)
@@ -735,12 +748,22 @@ void MainWindow::on_txtNames_currentRowChanged(int currentRow)
 
 void MainWindow::on_playstationbtn_clicked()
 {
-      audio->play("http:" + ui->stationurls->currentItem()->text(),1);
-ui->treeWidget->currentItem()->text(0);
+      audio->play("http:" + ui->stationurls->currentItem()->text().toLatin1(),1);
+//ui->treeWidget->currentItem()->text(0);
 }
 
 void MainWindow::on_treeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column)
 {
 
    ui->stationSearch->setText(ui->treeWidget->currentItem()->text(0) )  ;
+}
+
+void MainWindow::on_stationurls_itemDoubleClicked(QListWidgetItem *item)
+{
+    audio->play("http:" + ui->stationurls->currentItem()->text().toLatin1(),1);
+}
+
+void MainWindow::on_txtNames_itemDoubleClicked(QListWidgetItem *item)
+{
+    on_chooseStationbtn_clicked();
 }

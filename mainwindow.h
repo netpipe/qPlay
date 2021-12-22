@@ -11,6 +11,8 @@
 #include <QMouseEvent>
 #include <QStringListModel>
 #include <QTreeWidgetItem>
+#include <QListWidgetItem>
+
 
 #include "mpqt/audiothread.h"
 #include "mpqt/playlistManager.h"
@@ -120,6 +122,10 @@ void loadStyleSheet(QString sheet_name);
 void on_playstationbtn_clicked();
 
 void on_treeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
+
+void on_stationurls_itemDoubleClicked(QListWidgetItem *item);
+
+void on_txtNames_itemDoubleClicked(QListWidgetItem *item);
 
 private:
   Ui::MainWindow *ui;
