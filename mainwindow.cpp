@@ -598,7 +598,7 @@ ui->txtIds->clear();
 void MainWindow::on_chooseStationbtn_clicked()
 {
 
-
+ui->stationurls->clear();
    // ui->txtIds->addItem(buf);
     QString url2 = "http://yp.shoutcast.com/sbin/tunein-station.pls?id=";
             url2 +=    ui->txtIds->currentItem()->text().toLatin1();
