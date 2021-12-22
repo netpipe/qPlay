@@ -736,5 +736,11 @@ void MainWindow::on_txtNames_currentRowChanged(int currentRow)
 void MainWindow::on_playstationbtn_clicked()
 {
       audio->play("http:" + ui->stationurls->currentItem()->text(),1);
+ui->treeWidget->currentItem()->text(0);
+}
 
+void MainWindow::on_treeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column)
+{
+
+   ui->stationSearch->setText(ui->treeWidget->currentItem()->text(0) )  ;
 }

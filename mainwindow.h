@@ -10,6 +10,7 @@
 #include <QMimeData>
 #include <QMouseEvent>
 #include <QStringListModel>
+#include <QTreeWidgetItem>
 
 #include "mpqt/audiothread.h"
 #include "mpqt/playlistManager.h"
@@ -117,6 +118,8 @@ private slots:
 void loadStyleSheet(QString sheet_name);
 
 void on_playstationbtn_clicked();
+
+void on_treeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
 
 private:
   Ui::MainWindow *ui;
