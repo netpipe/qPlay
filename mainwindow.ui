@@ -795,96 +795,1296 @@ QScrollBar::handle {
               <property name="text">
                <string>Classical</string>
               </property>
+              <item>
+               <property name="text">
+                <string>Baroque</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Chamber</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Choral</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Classical Period</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Early Classical</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Impressionist</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Modern</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Opera</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Piano</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Romantic</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Symphony</string>
+               </property>
+              </item>
              </item>
              <item>
               <property name="text">
                <string>Country</string>
               </property>
+              <item>
+               <property name="text">
+                <string>Alt Country</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Americana</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Bluegrass</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Classic Country</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Contemporary Bluegrass</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Contemporary Country</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Honky Tonk</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Hits</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Western</string>
+               </property>
+              </item>
              </item>
              <item>
               <property name="text">
                <string>Easy Listening</string>
               </property>
+              <item>
+               <property name="text">
+                <string>Exotica</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Light Rock</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Lounge</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Orchestral Pop</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Polka</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Spac Age Pop</string>
+               </property>
+              </item>
              </item>
              <item>
               <property name="text">
                <string>Electronic</string>
               </property>
+              <item>
+               <property name="text">
+                <string>Acid House</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Ambient</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Big Beat</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Breakbeat</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Dance</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Demo</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Disco</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Downtempo</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Drum and Bass</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Electro</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Garage</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Hard House</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>House</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>IDM</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Jungle</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Progressive</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Techno</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Trance</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Tribal</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Trip Hop</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Dubstep</string>
+               </property>
+              </item>
              </item>
              <item>
               <property name="text">
                <string>Folk</string>
               </property>
+              <item>
+               <property name="text">
+                <string>Alternative Folk</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Contemporary Folk</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Folk Rock</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>New Acoustic</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Traditional Folk</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>World Folk</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Old Time</string>
+               </property>
+              </item>
              </item>
              <item>
               <property name="text">
                <string>Themes</string>
               </property>
+              <item>
+               <property name="text">
+                <string>Adult</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Best of chill</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Eclectic</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Experimental</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Female</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Heartache</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Instrumental</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>LGBT</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Love and Romance</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Party Mix</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Patriotic</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Rainy Day Mix</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Reality</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Sexy</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Shuffle</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Travel Mix</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Tribute</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Work Mix</string>
+               </property>
+              </item>
              </item>
              <item>
               <property name="text">
                <string>Rap</string>
               </property>
+              <item>
+               <property name="text">
+                <string>Alternative Rap</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Dirty South</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>East Coast Rap</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Freestyle</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Hip Hop</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Gangsta Rap</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Mixtapes</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Old School</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Turntablism</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Underground Hip Hop</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>West Coast Rap</string>
+               </property>
+              </item>
              </item>
              <item>
               <property name="text">
                <string>Inspirational</string>
               </property>
+              <item>
+               <property name="text">
+                <string>Christian</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Christian Metal</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Christian Rap</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Christian Rock</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Classic Christian</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Contemporary Gospel</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Gospel</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Praise and Worship</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Sermons and Services</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Southern Gospel</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Traditional Gospel</string>
+               </property>
+              </item>
              </item>
              <item>
               <property name="text">
                <string>International</string>
               </property>
+              <item>
+               <property name="text">
+                <string>African</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Arabic</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Asian</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Bollywood</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Brazilian</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Caribbean</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Celtic</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Chinese</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>European</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Filipino</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>French</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Greek</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Hawaiian and Pacific</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Hindi</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Indian</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Japanese</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Hebrew</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Klezmer</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Korean</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Mediterranean</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Middle Eastern</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>North American</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Russian</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Soca</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>South American</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Tamil</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Worldbeat</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Zouk</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>German</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Turkish</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Islamic</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Afrikaans</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Creole</string>
+               </property>
+              </item>
              </item>
              <item>
               <property name="text">
                <string>Jazz</string>
               </property>
+              <item>
+               <property name="text">
+                <string>Acid Jazz</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Avant Garde</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Big Band</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Bop</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Classic Jazz</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Cool Jazz</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Fusion</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Hard Bop</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Latin Jazz</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Smooth Jazz</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Swing</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Vocal Jazz</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>World Fusion</string>
+               </property>
+              </item>
              </item>
              <item>
               <property name="text">
                <string>Latin</string>
               </property>
+              <item>
+               <property name="text">
+                <string>Bachata</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Banda</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Bossa Nova</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Cumbia</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Latin Dance</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Latin Pop</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>LatinRap and Hip Hop</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Latin Rock</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Mariachi</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Merengue</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Ranchera</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Reggaeton</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Regional</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Mexican</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Salsa</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Tango</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Tejano</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Tropicalia</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Flamenco</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Samba</string>
+               </property>
+              </item>
              </item>
              <item>
               <property name="text">
                <string>Metal</string>
               </property>
+              <item>
+               <property name="text">
+                <string>Black Metal</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Classic Metal</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Extreme Metal</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Grindcore</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Hair Metal</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Heavy Metal</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Metalcore</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Power Metal</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Progressive Metal</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Rap Metal</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Death Metal</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Trash Metal</string>
+               </property>
+              </item>
              </item>
              <item>
               <property name="text">
                <string>New Age</string>
               </property>
+              <item>
+               <property name="text">
+                <string>Environmental</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Ethnic Fusion</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Healing</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Meditation</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Spiritual</string>
+               </property>
+              </item>
              </item>
              <item>
               <property name="text">
                <string>Decades</string>
               </property>
+              <item>
+               <property name="text">
+                <string>30s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>40s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>50s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>60s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>70s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>80s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>90s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>00s</string>
+               </property>
+              </item>
              </item>
              <item>
               <property name="text">
                <string>Pop</string>
               </property>
+              <item>
+               <property name="text">
+                <string>Adult Contemporary</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Barbershop</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Bubblegum Pop</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Dance Pop</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Idols</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Oldies</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>JPOP</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Soft Rock</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Teen Pop</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Top 40</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>World Pop</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>KPOP</string>
+               </property>
+              </item>
              </item>
              <item>
               <property name="text">
                <string>R&amp;B and Urban</string>
               </property>
+              <item>
+               <property name="text">
+                <string>Classic R&amp;B</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Contemporary R&amp;B</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Doo Wop</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Funk</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Motown</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Neo Soul</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Quiet Storm</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Soul</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Urban</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Contemporary</string>
+               </property>
+              </item>
              </item>
              <item>
               <property name="text">
                <string>Reggae</string>
               </property>
+              <item>
+               <property name="text">
+                <string>Contemporary Reggae</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Dancehall</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Dub</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Pop Reggae</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Ragga</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Rock Steady</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Reggae Roots</string>
+               </property>
+              </item>
              </item>
              <item>
               <property name="text">
                <string>Rock</string>
               </property>
+              <item>
+               <property name="text">
+                <string>Adult Album</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Alternative</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>British Invasion</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Classic Rock</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Garage Rock</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Glam</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Hard Rock</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Jam Bands</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Piano Rock</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Psychedelic</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Rock &amp; Roll</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Rockabilly</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Singer and Songwriter</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Surf</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>JROCK</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Celtic Rock</string>
+               </property>
+              </item>
              </item>
              <item>
               <property name="text">
-               <string>Seasonial</string>
+               <string>Seasonial and Holiday</string>
               </property>
+              <item>
+               <property name="text">
+                <string>Anniversary</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Birthday</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Christmas</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Halloweed</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Hanukkah</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Honeymoon</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Kwanazaa</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Valentine</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Wedding</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Winter</string>
+               </property>
+              </item>
              </item>
              <item>
               <property name="text">
