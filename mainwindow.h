@@ -127,6 +127,10 @@ void on_stationurls_itemDoubleClicked(QListWidgetItem *item);
 
 void on_txtNames_itemDoubleClicked(QListWidgetItem *item);
 
+void on_pushButton_4_clicked();
+
+void on_pushButton_5_clicked();
+
 private:
   Ui::MainWindow *ui;
 

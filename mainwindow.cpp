@@ -767,3 +767,25 @@ void MainWindow::on_txtNames_itemDoubleClicked(QListWidgetItem *item)
 {
     on_chooseStationbtn_clicked();
 }
+
+void MainWindow::on_pushButton_4_clicked()
+{
+
+
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),
+                                                "/home",
+                                                QFileDialog::ShowDirsOnly
+                                                | QFileDialog::DontResolveSymlinks);
+
+       onFindMusic(dir.toLatin1());
+}
+
+void MainWindow::on_pushButton_5_clicked()
+{
+
+    QString fileName = QFileDialog::getOpenFileName(this, ("Open File"),
+                                                    "/home",
+                                                    ("Images (*.mp3 *.ogg *.wav)"));
+
+    audio->play(fileName,0);
+}
