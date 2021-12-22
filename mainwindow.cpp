@@ -528,7 +528,9 @@ parseSearch();
 }
 
 void MainWindow::parseSearch(){
-qDebug() << "testing\n";
+
+    ui->txtIds->clear();
+    ui->txtNames->clear();
 
 QString fileName = "./stationsearch";
 QFile file(fileName);
@@ -715,11 +717,11 @@ void MainWindow::on_txtIds_currentRowChanged(int currentRow)
 //        }
 //    }
 
-QFile::remove("tunein-station.pls");
-QString url2 = "http://yp.shoutcast.com/sbin/tunein-station.pls?id=";
-        url2 +=    ui->txtIds->currentItem()->text().toLatin1();
+//QFile::remove("tunein-station.pls");
+//QString url2 = "http://yp.shoutcast.com/sbin/tunein-station.pls?id=";
+//        url2 +=    ui->txtIds->currentItem()->text().toLatin1();
 
-dlmanager->Download(url2);
+//dlmanager->Download(url2);
 }
 
 void MainWindow::on_comboBox_currentIndexChanged(const QString &arg1)
@@ -756,11 +758,13 @@ void MainWindow::on_treeWidget_itemDoubleClicked(QTreeWidgetItem *item, int colu
 {
 
    ui->stationSearch->setText(ui->treeWidget->currentItem()->text(0) )  ;
+   parseSearch();
 }
 
 void MainWindow::on_stationurls_itemDoubleClicked(QListWidgetItem *item)
 {
     audio->play("http:" + ui->stationurls->currentItem()->text().toLatin1(),1);
+
 }
 
 void MainWindow::on_txtNames_itemDoubleClicked(QListWidgetItem *item)

@@ -24,7 +24,7 @@
     <item row="0" column="0">
      <widget class="QTabWidget" name="uitabwidget_2">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab_5">
        <attribute name="title">
@@ -2090,11 +2090,101 @@ QScrollBar::handle {
               <property name="text">
                <string>SoundTracks</string>
               </property>
+              <item>
+               <property name="text">
+                <string>Anime</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Kids</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Original Score</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Showtunes</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Video Game Music</string>
+               </property>
+              </item>
              </item>
              <item>
               <property name="text">
                <string>Talk</string>
               </property>
+              <item>
+               <property name="text">
+                <string>Comedy</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Community</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Educational</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Government</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>News</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Old Time Radio</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Other Talk</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Political</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Scanner</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Spoken Word</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Sports</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Technology</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>BlogTalk</string>
+               </property>
+              </item>
              </item>
              <item>
               <property name="text">
@@ -2105,6 +2195,31 @@ QScrollBar::handle {
               <property name="text">
                <string>Public Radio</string>
               </property>
+              <item>
+               <property name="text">
+                <string>News</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Talk</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>College</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Sports</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Weather</string>
+               </property>
+              </item>
              </item>
             </widget>
            </item>
