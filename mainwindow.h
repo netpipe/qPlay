@@ -116,6 +116,8 @@ private slots:
   void on_cmbTheme_currentIndexChanged(const QString &arg1);
 void loadStyleSheet(QString sheet_name);
 
+void on_playstationbtn_clicked();
+
 private:
   Ui::MainWindow *ui;
 

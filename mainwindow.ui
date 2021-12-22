@@ -24,7 +24,7 @@
     <item row="0" column="0">
      <widget class="QTabWidget" name="uitabwidget_2">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab_5">
        <attribute name="title">
@@ -617,167 +617,11 @@ QScrollBar::handle {
            <item row="3" column="2">
             <widget class="QLineEdit" name="stationSearch"/>
            </item>
-           <item row="4" column="3">
-            <widget class="QPushButton" name="refreshbtn">
-             <property name="text">
-              <string>refresh</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="2" colspan="2">
-            <widget class="QListWidget" name="stationurls"/>
-           </item>
-           <item row="1" column="1" rowspan="5">
-            <widget class="QListWidget" name="txtNames"/>
-           </item>
-           <item row="5" column="2">
-            <widget class="QPushButton" name="chooseStationbtn">
-             <property name="text">
-              <string>ChooseStation</string>
-             </property>
-            </widget>
-           </item>
            <item row="1" column="0" rowspan="5">
             <widget class="QListWidget" name="txtIds">
              <property name="sizeAdjustPolicy">
               <enum>QAbstractScrollArea::AdjustToContents</enum>
              </property>
-            </widget>
-           </item>
-           <item row="4" column="2">
-            <widget class="QPushButton" name="pushButton_3">
-             <property name="text">
-              <string>Search</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="2" colspan="2">
-            <widget class="QComboBox" name="comboBox">
-             <item>
-              <property name="text">
-               <string>Alternative</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Blues</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Classical</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Country</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Easy Listening</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Electronic</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Folk</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Themes</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Rap</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Inspirational</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>International</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Jazz</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Latin</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Metal</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>New Age</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Decades</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Pop</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>R&amp;B and Urban</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Reggae</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Rock</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Seasonal and Holiday</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Soundtracks</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Talk</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Misc</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Public Radio</string>
-              </property>
-             </item>
             </widget>
            </item>
            <item row="1" column="4" rowspan="5">
@@ -1064,10 +908,188 @@ QScrollBar::handle {
              </item>
             </widget>
            </item>
+           <item row="1" column="1" rowspan="5">
+            <widget class="QListWidget" name="txtNames"/>
+           </item>
+           <item row="2" column="2" colspan="2">
+            <widget class="QComboBox" name="comboBox">
+             <item>
+              <property name="text">
+               <string>Alternative</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Blues</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Classical</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Country</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Easy Listening</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Electronic</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Folk</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Themes</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Rap</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Inspirational</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>International</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Jazz</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Latin</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Metal</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>New Age</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Decades</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Pop</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>R&amp;B and Urban</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Reggae</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Rock</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Seasonal and Holiday</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Soundtracks</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Talk</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Misc</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Public Radio</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="4" column="3">
+            <widget class="QPushButton" name="refreshbtn">
+             <property name="text">
+              <string>refresh</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <widget class="QPushButton" name="chooseStationbtn">
+             <property name="text">
+              <string>ChooseStation</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2" colspan="2">
+            <widget class="QListWidget" name="stationurls"/>
+           </item>
+           <item row="4" column="2">
+            <widget class="QPushButton" name="pushButton_3">
+             <property name="text">
+              <string>Search</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="3">
+            <widget class="QPushButton" name="playstationbtn">
+             <property name="text">
+              <string>playstation</string>
+             </property>
+            </widget>
+           </item>
           </layout>
          </widget>
         </item>
        </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Page</string>
+       </attribute>
+       <widget class="QTextEdit" name="textEdit">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>80</y>
+          <width>331</width>
+          <height>311</height>
+         </rect>
+        </property>
+       </widget>
       </widget>
      </widget>
     </item>

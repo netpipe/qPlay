@@ -597,19 +597,66 @@ ui->txtIds->clear();
 
 void MainWindow::on_chooseStationbtn_clicked()
 {
-   // ui->txtIds->addItem(buf);
-  //  QString url2 = "http://yp.shoutcast.com/sbin/tunein-station.pls?id=";
-  //          url2 +=    ui->txtIds->currentItem()->text().toLatin1();
 
-  //  dlmanager->Download(url2);
+
+   // ui->txtIds->addItem(buf);
+    QString url2 = "http://yp.shoutcast.com/sbin/tunein-station.pls?id=";
+            url2 +=    ui->txtIds->currentItem()->text().toLatin1();
+
+    dlmanager->Download(url2);
+
+//    QThread::sleep(500);
 
     //parse data
 
 //    tunein-station.pls
 //"(http|https)://[a-zA-Z0-9./?=_%:-]*"
 
+    QString filename="tunein-station.pls";
+    QFile file(filename);
+    QString line;
+   // ui->textEdit->clear();
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text)){
+        QTextStream stream(&file);
+        while (!stream.atEnd()){
+            line = stream.readLine();
+            ui->textEdit->setText(ui->textEdit->toPlainText()+line+"\n");
+            qDebug() << "linea: "<<line;
+        }
+    }
+    file.close();
+
+
+    QString inputstring = ui->textEdit->toPlainText();
+
+    QRegExp regex;
+    //regex.setPattern("name=\\\"([^\\\"]+)\\\"");
+
+     regex.setPattern("(http|https)://[a-zA-Z0-9./?=_%:-]*");
+    QStringList namelist, idlist;
+    int pos = 0;
+    while (pos >= 0)
+    {
+        pos = regex.indexIn(inputstring, pos);
+
+        if (pos >= 0)
+        {
+            QString strName = regex.cap(0);
+            strName = strName.mid(5);
+            namelist.push_back(strName);
+                ui->stationurls->addItem(strName);
+            pos += strName.length();
+        }
+    }
+
+
+    QString fileName = "./tunein-station.pls";
+    QFile file2(fileName);
+        file2.remove();
+        file2.close();
+
 //audio->play("http://185.33.21.112:80/rockclassics_64",1);
-    audio->play("http://185.33.21.112:80/rockclassics_64",1);
+  //  audio->play("http://185.33.21.112:80/rockclassics_64",1);
 
 }
 
@@ -646,4 +693,10 @@ void MainWindow::on_refreshbtn_clicked()
 void MainWindow::on_txtNames_currentRowChanged(int currentRow)
 {
         ui->txtIds->setCurrentRow(currentRow);
+}
+
+void MainWindow::on_playstationbtn_clicked()
+{
+      audio->play("http:" + ui->stationurls->currentItem()->text(),1);
+
 }
