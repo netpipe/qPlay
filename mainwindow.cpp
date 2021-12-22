@@ -769,6 +769,18 @@ void MainWindow::on_stationurls_itemDoubleClicked(QListWidgetItem *item)
 
 void MainWindow::on_txtNames_itemDoubleClicked(QListWidgetItem *item)
 {
+    QFile::remove("tunein-station.pls");
+    QString url2 = "http://yp.shoutcast.com/sbin/tunein-station.pls?id=";
+            url2 +=    ui->txtIds->currentItem()->text().toLatin1();
+
+    dlmanager->Download(url2);
+
+    QTime dieTime = QTime::currentTime().addMSecs( 1000 );
+    while( QTime::currentTime() < dieTime )
+    {
+        QCoreApplication::processEvents( QEventLoop::AllEvents, 100 );
+    }
+
     on_chooseStationbtn_clicked();
 }
 
