@@ -531,6 +531,7 @@ void MainWindow::parseSearch(){
 
     ui->txtIds->clear();
     ui->txtNames->clear();
+    ui->stationurls->clear();
 
 QString fileName = "./stationsearch";
 QFile file(fileName);
