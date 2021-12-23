@@ -622,7 +622,7 @@ ui->stationurls->clear();
     QString filename="tunein-station.pls";
     QFile file(filename);
     QString line;
-   // ui->textEdit->clear();
+    ui->textEdit->clear();
     if (file.open(QIODevice::ReadOnly | QIODevice::Text)){
         QTextStream stream(&file);
         while (!stream.atEnd()){
@@ -808,4 +808,21 @@ void MainWindow::on_pushButton_5_clicked()
                                                     ("Images (*.mp3 *.ogg *.wav)"));
 
     audio->play(fileName,0);
+}
+
+void MainWindow::on_txtIds_itemDoubleClicked(QListWidgetItem *item)
+{
+    QFile::remove("tunein-station.pls");
+    QString url2 = "http://yp.shoutcast.com/sbin/tunein-station.pls?id=";
+            url2 +=    ui->txtIds->currentItem()->text().toLatin1();
+
+    dlmanager->Download(url2);
+
+    QTime dieTime = QTime::currentTime().addMSecs( 1000 );
+    while( QTime::currentTime() < dieTime )
+    {
+        QCoreApplication::processEvents( QEventLoop::AllEvents, 100 );
+    }
+
+    on_chooseStationbtn_clicked();
 }
