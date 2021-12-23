@@ -9,3 +9,5 @@ shoutcast support nearly ready just needs playlist saving
 
 ![qPlay](screenshot.png)
 ![qPlay](screenshot2.png)
+
+https://drive.google.com/file/d/1WXDfbOs0nr64O2NpDxIGHzKR4Qwu3PLu/view?usp=sharing  here is windows compiled version. does not seem to work through rdp (remote desktop)
