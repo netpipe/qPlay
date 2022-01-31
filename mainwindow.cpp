@@ -101,7 +101,50 @@ QString stylesheet;
 }
 loaded=true;
 
+
+ui->dockWidget_5->setFixedWidth(300);
+
+// QWidget *pic = new QWidget(this);
+// pic->setStyleSheet("background-image: url(\"test.png\")");
+// pic->setGeometry(QRect(0,0,220,484));
+
+//QPixmap bkgnd("/home/netpipe/Pictures/test.png");
+//bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);
+//QPalette palette;
+//palette.setBrush(QPalette::Background, bkgnd);
+//this->setPalette(palette);
+
+//this->ui->uitabwidget_2->setStyleSheet(     "background-image:url(\"test.png\"); background-position: center;" );
+//this->setStyleSheet(            "QWidget# { "            " background-image: url(:/test.png) 0 0 0 0 stretch stretch;"            "}");
+this->setStyleSheet(     "QTabWidget { background-image:url(\"test.png\"); background-position: center;}" );
+
+//QPixmap pixmap("./test.png");
+//        QListView w;
+//        QPalette p = w.palette();
+//        p.setBrush(QPalette::Base, pixmap);
+//        w.setPalette(p);
+//        w.resize(pixmap.size());
+
+pixmap.load("./test.png");
 }
+
+void MainWindow::paintEvent(QPaintEvent *pe)
+ {
+
+
+    QPainter paint(this);
+    int widWidth = this->ui->uitabwidget_2->width();
+    int widHeight = this->ui->uitabwidget_2->height();
+    pixmap = pixmap.scaled(widWidth, widHeight, Qt::KeepAspectRatioByExpanding);
+    paint.drawPixmap(0, 0, pixmap);
+    QWidget::paintEvent(pe);
+
+//    QPainter* pPainter = new QPainter(this);
+//    pPainter->drawPixmap(rect(), QPixmap("./test.png"));
+//    delete pPainter;
+//    QWidget::paintEvent(pe);
+
+ }
 
 MainWindow::~MainWindow() { delete ui; }
 
@@ -305,7 +348,7 @@ void MainWindow::onSlidertime(QString sliderduration, qint64 duration,
     // qDebug() << "Slider position" << sliderduration;
     ui->horizontalSlider_2->setMaximum(duration);
     ui->horizontalSlider_2->setValue(progress);
-    ui->label_bgr->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Minimum);
+    //ui->label_bgr->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Minimum);
     ui->horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
     ui->label_duration_2->setAlignment(Qt::AlignTop | Qt::AlignLeft);
     ui->label_duration_2->setContentsMargins(0, 0, 0, 0);

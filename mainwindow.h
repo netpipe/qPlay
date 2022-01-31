@@ -53,7 +53,7 @@ public:
   short repeatMode;
   long position;
   QAction *clearAction, *scanAction;
-
+QPixmap pixmap;
 protected:
   void addItem(QString s);
   void dropEvent(QDropEvent *e);
@@ -89,6 +89,8 @@ private slots:
   void on_actionScan_triggered();
 
   void on_actionClear_triggered();
+
+  void paintEvent(QPaintEvent *pe);
 
   void on_Play_clicked();
 
@@ -135,6 +137,7 @@ void on_txtIds_itemDoubleClicked(QListWidgetItem *item);
 
 private:
   Ui::MainWindow *ui;
+
 
   QString m_trackDuration;
   DownloadManager *dlmanager;
