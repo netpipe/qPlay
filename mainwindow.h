@@ -135,6 +135,46 @@ void on_pushButton_5_clicked();
 
 void on_txtIds_itemDoubleClicked(QListWidgetItem *item);
 
+void on_s50hz_sliderMoved(int position);
+
+void on_s100hz_sliderMoved(int position);
+
+void on_s156hz_sliderMoved(int position);
+
+void on_s220hz_sliderMoved(int position);
+
+void on_s311hz_sliderMoved(int position);
+
+void on_s440hz_sliderMoved(int position);
+
+void on_s622hz_sliderMoved(int position);
+
+void on_s880hz_sliderMoved(int position);
+
+void on_s125khz_sliderMoved(int position);
+
+void on_s175khz_sliderMoved(int position);
+
+void on_s25khz_sliderMoved(int position);
+
+void on_s35khz_sliderMoved(int position);
+
+void on_s5khz_sliderMoved(int position);
+
+void on_s10khz_sliderMoved(int position);
+
+void on_s20khz_sliderMoved(int position);
+
+void WritePresetFile(QString fileName);
+
+private slots:
+//void on_actionExit_triggered();
+
+void on_applybtn_clicked();
+void on_preset_currentIndexChanged(int index);
+
+void on_preamp_slider_sliderMoved(int position);
+
 private:
   Ui::MainWindow *ui;
 
