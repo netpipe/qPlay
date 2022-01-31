@@ -91,7 +91,7 @@ QString stylesheet;
           list = line.split(rx);
               qDebug() << "theme" <<  list.at(1).toLatin1();
               stylesheet =  list.at(1).toLatin1();
-        loadStyleSheet( list.at(1).toLatin1());
+        //loadStyleSheet( list.at(1).toLatin1());
 
               MyFile.close();
       }
