@@ -466,9 +466,7 @@ border-radius: 4px;
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">#centralWidget {
-border-image: url(:/test.png) 0 0 0 0 stretch stretch;
-}</string>
+         <string notr="true">background: transparent;</string>
         </property>
        </widget>
        <widget class="QWidget" name="verticalLayoutWidget_2">
@@ -476,7 +474,7 @@ border-image: url(:/test.png) 0 0 0 0 stretch stretch;
          <rect>
           <x>0</x>
           <y>170</y>
-          <width>478</width>
+          <width>497</width>
           <height>150</height>
          </rect>
         </property>
@@ -3024,7 +3022,7 @@ border-image: url(:/test.png) 0 0 0 0 stretch stretch;
      <x>0</x>
      <y>0</y>
      <width>953</width>
-     <height>24</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuMain">
